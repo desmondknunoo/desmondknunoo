@@ -1,4 +1,4 @@
-Desmond's Portfolio (HTML, CSS, JavaScript and Bootstrap 5)
+Desmond's Portfolio (Built with HTML, CSS, JavaScript and Bootstrap 5)
 =======
 
 
@@ -10,6 +10,6 @@ Desmond's Portfolio (HTML, CSS, JavaScript and Bootstrap 5)
 
 This is the [live demo](https://brad-portfolio.netlify.app/) of the project. 
 
-Credit to [SampurnaC](https://github.com/SampurnaC)for the template 
+Thanks to [SampurnaC](https://github.com/SampurnaC) for the template. 
 
 # desmond-portfolio
