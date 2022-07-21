@@ -1,4 +1,4 @@
-Desmond's Portfolio (Built with HTML, CSS, JavaScript and Bootstrap 5)
+Desmond's Portfolio (HTML, CSS, JavaScript and Bootstrap 5)
 =======
 
 
@@ -8,7 +8,7 @@ Desmond's Portfolio (Built with HTML, CSS, JavaScript and Bootstrap 5)
 * [Font Awesome 5](https://fontawesome.com/)
 * [google map](https://www.embed-map.com/)
 
-This is the [live demo](https://brad-portfolio.netlify.app/) of the project. 
+My portfolio is live [here](https://brad-portfolio.netlify.app/). 
 
 Thanks to [SampurnaC](https://github.com/SampurnaC) for the template. 
 
