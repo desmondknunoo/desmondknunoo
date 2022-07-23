@@ -90,6 +90,7 @@
     background-color: #2d2d2d;
     border-radius: 25px;
     border: 0px;
+    transform: scale(1.015);
 }
 
 .card-title {
@@ -103,7 +104,9 @@
     border: 0px solid #191919;
     border-radius: 25px;
 }
-/* portfolio section image css */
+/* portfolio section css */
+
+
 
 .portfolioText.card {
     height: 245px;
@@ -113,6 +116,8 @@
     border-radius: 25px;
 
 }
+
+
 
 .card2{
     background-color: #1e1e1e;
@@ -124,6 +129,8 @@
 }
 
 .card2:hover {
+
+    transform: scale(1.015);
     background-color: #282828;
     border-radius: 25px;
     border: 0px;
