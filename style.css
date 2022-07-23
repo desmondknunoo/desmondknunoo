@@ -1,6 +1,6 @@
 /* display background color black on navbar scroll */
 .navbarScroll.navbarDark {
-    background-color: #121212;
+    background-color: black;
 }
 
 /* hero background image */
@@ -16,6 +16,8 @@
 }
 .hero_desc {
     font-size: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .hero-text {
     text-align: center;
@@ -26,17 +28,13 @@
     color: white;
 }
 
-
-
 /* spacing on all sections */
 #about, #services, #portfolio, #contact {
     margin-top: 4rem;
     padding-top: 4rem;
-    background-color: #151515;
 }
 #contact {
     padding-bottom: 4rem;
-    background-color: #151515;
 }
 /* about section image css */
 .imageAboutPage {
@@ -47,29 +45,23 @@
 .servicesText.card {
     height: 280px;
     cursor: pointer;
-    background-color: #121212;
   }
 .servicesIcon {
-    font-size: 36px;
-    text-align: center;
+    font-size: 20px;
+    text-align: left;
     width: 100%;
 }
+
 .card-title {
-    text-align: center;
+    text-align: left;
+    font-size: 1.4rem;
 }
 .card:hover .servicesIcon {
-    color: #303030;
+    color: #121212;
 }
 .servicesText:hover {
-    border: 1px solid #303030;
+    border: 1px solid #121212;
 }
-
-/* social media icons styling */
-.social-icons {
-    font-size: 36px;
-    cursor: pointer;
-}
-
 
 /* footer styling */
 #footer {
@@ -167,7 +159,7 @@
  margin-bottom: 4px;  
 }   
 .social-icons a {  
- background-color: #eceeef;  
+ background-color: #ffffff;  
  color: #7a7a7a;  
  font-size: 16px;  
  display: inline-block;  
@@ -181,9 +173,7 @@
  -o-transition: all 0.2s linear;  
  transition: all 0.2s linear;  
 }  
-.logo{  
- color:#eb6857;  
-}  
+ 
 .social-icons a:active,  
 .social-icons a:focus,  
 .social-icons a:hover {  
@@ -203,5 +193,8 @@
  background-color: #212121;  
 }
 .social-icons a.instagram:hover {  
+    background-color: #212121; 
+}  
+.social-icons a.github:hover {  
     background-color: #212121; 
 }  
