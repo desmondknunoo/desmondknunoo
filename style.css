@@ -29,12 +29,25 @@
     color: #dfdfdf;
 }
 
-.services-text{
+.services-text {
     color: #dfdfdf;
 }
+
+.portfolio-text {
+    color: #dfdfdf;
+}
+
 /* spacing on all sections */
-#about, #services, #portfolio, #contact {
+#services, #contact {
     margin-top: 4rem;
+    padding-top: 4rem;
+}
+
+#about{
+    padding-top: 4rem;
+}
+
+#portfolio{
     padding-top: 4rem;
 }
 #contact {
@@ -42,9 +55,15 @@
 }
 
 #services {
-    margin-top: 4rem;
+    padding-top: 4rem;
     background-color: #121212;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
+}
+
+#portfolio {
+    padding-top: 4rem;
+    background-color: #050505;
+    padding-bottom: 4rem;
 }
 /* about section image css */
 .imageAboutPage {
@@ -53,10 +72,10 @@
 
 /* services section css */
 .servicesText.card {
-    height: 240px;
+    height: 245px;
     cursor: pointer;
     border: 0px;
-    background-color: #000;
+    background-color: #1e1e1e;
     border-radius: 25px;
     
   }
@@ -65,12 +84,6 @@
     text-align: left;
     width: 100%;
     color: #dfdfdf;
-}
-
-.card-body{
-    background-color: #222222;
-    border-radius: 25px;
-    border: 0px;
 }
 
 .card-body:hover{
@@ -87,14 +100,42 @@
     color: #dfdfdf;
 }
 .servicesText:hover {
-    border: 0px solid #121212;
+    border: 0px solid #191919;
+    border-radius: 25px;
+}
+/* portfolio section image css */
+
+.portfolioText.card {
+    height: 245px;
+    cursor: pointer;
+    border: 0px;
+    background-color: #1e1e1e;
+    border-radius: 25px;
+
+}
+
+.card2{
+    background-color: #1e1e1e;
+    border-radius: 25px;
+    border: 0px;
+}
+.card-body2{
+    padding: 2rem;
+}
+
+.card2:hover {
+    background-color: #282828;
+    border-radius: 25px;
+    border: 0px;
+}
+.portfolioText:hover {
+    border: 0px solid #191919;
     border-radius: 25px;
 }
 
-
 /* footer styling */
 #footer {
-    background-color: #121212;
+    background-color: #050505;
     text-align: center;
 }
 
@@ -105,7 +146,7 @@
 }  
 
 .site-footer {  
- background-color: #121212;  
+ background-color: #050505;  
  padding: 45px 0 20px;  
  font-size: 15px;  
  line-height: 24px;  
