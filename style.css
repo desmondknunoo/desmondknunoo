@@ -29,6 +29,29 @@
     color: #dfdfdf;
 }
 
+.apexandover { 
+    background:none; 
+    border:none; 
+}
+.apexandover:hover {
+    color: #0073ba;
+}
+
+.africawork_s { 
+    background:none; 
+    border:none; 
+}
+.africawork_s:hover {
+    color: #dd406b;
+}
+
+
+
+
+
+
+
+
 .services-text {
     color: #dfdfdf;
 }
