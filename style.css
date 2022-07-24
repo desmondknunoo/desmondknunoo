@@ -31,7 +31,9 @@
 
 .apexandover { 
     background:none; 
-    border:none; 
+    border:none;
+    color: #050505;
+    text-underline-offset: 80rem; 
 }
 .apexandover:hover {
     color: #0073ba;
@@ -39,7 +41,10 @@
 
 .africawork_s { 
     background:none; 
-    border:none; 
+    border:none;
+    color: #050505;
+    text-underline-offset: 80rem; 
+ 
 }
 .africawork_s:hover {
     color: #dd406b;
