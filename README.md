@@ -11,5 +11,3 @@ Desmond's Portfolio (HTML, CSS, JavaScript and Bootstrap 5)
 My portfolio is live [here](https://brad-portfolio.netlify.app/). 
 
 Thanks to [SampurnaC](https://github.com/SampurnaC) for the template. 
-
-# desmond-portfolio
