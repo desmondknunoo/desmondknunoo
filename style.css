@@ -332,6 +332,37 @@
 
 
 
+.card-disabbled {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.card-disabbled li {
+    display:inline-flex;
+    margin-bottom: 4px;
+}
+
+.card-disabbled a {
+    background-color: #777777;
+    color: #ffffff;
+    display: inline-flex;
+    text-align: center;
+    margin-right: 8px;
+    width: max-content;
+}
+
+.card-disabbled a:active,
+.card-disabbled a:focus,
+.card-disabbled a:hover {
+    color: #ffffff;
+    background-color: #777777;
+}
+
+
+
+
+
 
 
 .card-button {
