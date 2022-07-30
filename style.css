@@ -5,16 +5,36 @@
 
 
 /* hero background image */
-.bgimage {
+/* .bgimage {
     height: 100vh;
     background: url('images/heroImage.jpeg');
     background-size: cover;
     position: relative;
+} */
+
+.bgimage {
+	height: 100vh;
+	background: linear-gradient(45deg, rgba(35, 14, 18, 0.7), rgba(12, 31, 35, 0.7), rgba(30, 31, 11, 0.7), rgba(28, 11, 16, 0.7), rgba(11, 28, 28, 0.7)) 0 0 / 1000% no-repeat, url(https://picsum.photos/g/2000/1200?image=6) 0 0 / cover no-repeat;
+	-webkit-animation: gradientAnimation 40s ease infinite;
+	animation: gradientAnimation 40s ease infinite;
 }
+@-webkit-keyframes gradientAnimation {
+	0%   { background-position: 0% 30%, 0 0;}
+	50%  { background-position: 100% 70%, 0 0;}
+	100% { background-position: 0% 30%, 0 0;}
+}
+@keyframes gradientAnimation {
+	0%   { background-position: 0% 30%, 0 0;}
+	50%  { background-position: 100% 70%, 0 0;}
+	100% { background-position: 0% 30%, 0 0;}
+}
+
 
 /* text css above hero image*/
 .hero_title {
     font-size: 4.5rem;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .hero_desc {
@@ -24,7 +44,7 @@
 }
 
 .hero-text {
-    text-align: center;
+    text-align: left;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -32,25 +52,14 @@
     color: #dfdfdf;
 }
 
-.apexandover {
+.link-text {
     background: none;
     border: none;
     color: #050505;
 }
 
-.apexandover:hover {
+.link-text:hover {
     color: #0073ba;
-}
-
-.africawork_s {
-    background: none;
-    border: none;
-    color: #050505;
-
-}
-
-.africawork_s:hover {
-    color: #dd406b;
 }
 
 .services-text {
