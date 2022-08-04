@@ -8,6 +8,6 @@ Desmond's Portfolio (HTML, CSS, JavaScript and Bootstrap 5)
 * [Font Awesome 5](https://fontawesome.com/)
 * [google map](https://www.embed-map.com/)
 
-My portfolio is live [here](https://brad-portfolio.netlify.app/). 
+My portfolio is live [here](https://desmond-portfolio.vercel.app/). 
 
 Thanks to [SampurnaC](https://github.com/SampurnaC) for the template. 
