@@ -1,6 +1,8 @@
 Desmond's Portfolio (HTML, CSS, JavaScript and Bootstrap 5)
 =======
 
+### My personal portfolio based on a template by SampurnaC
+### My portfolio is live [here](https://desmond-portfolio.vercel.app/). 
 
 # Tools used #
 * HTML, CSS and JavaScript
@@ -8,6 +10,5 @@ Desmond's Portfolio (HTML, CSS, JavaScript and Bootstrap 5)
 * [Font Awesome 5](https://fontawesome.com/)
 * [google map](https://www.embed-map.com/)
 
-My portfolio is live [here](https://desmond-portfolio.vercel.app/). 
 
 Thanks to [SampurnaC](https://github.com/SampurnaC) for the template. 
