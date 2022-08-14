@@ -11,9 +11,10 @@
     position: relative;
 } */
 
-.bgimage {
-  height: 100vh;
-  -webkit-animation: gradientAnimation 15s ease infinite;
+.bgimage2 {
+  background: url('images/header.jpg');
+  background-size:cover;
+  position:relative;  -webkit-animation: gradientAnimation 15s ease infinite;
   animation: gradientAnimation 15s ease infinite;
 }
 .bgimage {
@@ -21,6 +22,8 @@
   background: url('images/header.jpg');
   background-size:cover;
   position:relative;
+  -webkit-animation: gradientAnimation 15s ease infinite;
+  animation: gradientAnimation 15s ease infinite;
 }
 @-webkit-keyframes gradientAnimation {
   0% {
@@ -131,6 +134,8 @@
 }
 
 #contact {
+  padding-top: 4rem;
+  background-color: #121212;
   padding-bottom: 4rem;
 }
 
@@ -405,8 +410,7 @@
 }
 
 .social-icons a {
-  background-color: #dfdfdf;
-  color: #7a7a7a;
+  color: #dfdfdf;
   font-size: 16px;
   display: inline-block;
   line-height: 44px;
@@ -423,32 +427,32 @@
 .social-icons a:active,
 .social-icons a:focus,
 .social-icons a:hover {
-  color: #dfdfdf;
+  color: #212121;
   background-color: #212121;
 }
 
 .social-icons a.facebook:hover {
-  background-color: #212121;
+  background-color: #dfdfdf;
 }
 
 .social-icons a.twitter:hover {
-  background-color: #212121;
+  background-color: #dfdfdf;
 }
 
 .social-icons a.linkedin:hover {
-  background-color: #212121;
+  background-color: #dfdfdf;
 }
 
 .social-icons a.behance:hover {
-  background-color: #212121;
+  background-color: #dfdfdf;
 }
 
 .social-icons a.instagram:hover {
-  background-color: #212121;
+  background-color: #dfdfdf;
 }
 
 .social-icons a.github:hover {
-  background-color: #212121;
+  background-color: #dfdfdf;
 }
 
 .card-disabbled {
