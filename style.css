@@ -59,7 +59,7 @@
 }
 
 .hero-text {
-  text-align: center;
+  text-align: left;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -70,11 +70,11 @@
 .link-text {
   background: none;
   border: none;
-  color: #050505;
+  color: #d7d7d7;
 }
 
 .link-text:hover {
-  color: #0073ba;
+  color: #ffffff;
 }
 
 .services-text {
@@ -84,6 +84,39 @@
 .portfolio-text {
   color: #dfdfdf;
 }
+
+
+
+.about__content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+@media(max-width: 900px) {
+  .about__content {
+      flex-direction: column-reverse;
+      align-items: initial;
+  }
+}
+
+.about__photo-container {
+  margin-bottom: var(--gutter-normal);
+}
+
+@media(min-width: 901px) {
+  .about__text {
+      flex: 0 0 35%;
+  }
+  
+  .about__photo-container {
+      flex: 1;
+      margin: 0 var(--gutter-huge) 0 0;
+  }
+}
+
+
+
 
 /* spacing on all sections */
 #services,
@@ -218,7 +251,7 @@
 }
 
 .site-footer h6 {
-  color: #fff;
+  color: #dfdfdf;
   font-size: 16px;
   text-transform: uppercase;
   margin-top: 5px;
@@ -230,7 +263,7 @@
 }
 
 .site-footer a:hover {
-  color: #fff;
+  color: #dfdfdf;
   text-decoration: none;
 }
 
@@ -250,7 +283,7 @@
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
-  color: #fff;
+  color: #dfdfdf;
   text-decoration: none;
 }
 
@@ -301,7 +334,7 @@
 }
 
 .social-icons-header a {
-  color: #fff;
+  color: #dfdfdf;
   font-size: 16px;
   display: inline-block;
   line-height: 44px;
@@ -324,27 +357,27 @@
 }
 
 .social-icons-header a.facebook:hover {
-  background-color: #fff;
+  background-color: #dfdfdf;
 }
 
 .social-icons-header a.twitter:hover {
-  background-color: #fff;
+  background-color: #dfdfdf;
 }
 
 .social-icons-header a.linkedin:hover {
-  background-color: #fff;
+  background-color: #dfdfdf;
 }
 
 .social-icons-header a.behance:hover {
-  background-color: #fff;
+  background-color: #dfdfdf;
 }
 
 .social-icons-header a.instagram:hover {
-  background-color: #fff;
+  background-color: #dfdfdf;
 }
 
 .social-icons-header a.github:hover {
-  background-color: #fff;
+  background-color: #dfdfdf;
 }
 
 
@@ -369,7 +402,7 @@
 }
 
 .social-icons a {
-  background-color: #ffffff;
+  background-color: #dfdfdf;
   color: #7a7a7a;
   font-size: 16px;
   display: inline-block;
@@ -387,7 +420,7 @@
 .social-icons a:active,
 .social-icons a:focus,
 .social-icons a:hover {
-  color: #fff;
+  color: #dfdfdf;
   background-color: #212121;
 }
 
@@ -428,7 +461,7 @@
 
 .card-disabbled a {
   background-color: #777777;
-  color: #ffffff;
+  color: #dfdfdf;
   display: inline-flex;
   text-align: center;
   margin-right: 8px;
@@ -438,7 +471,7 @@
 .card-disabbled a:active,
 .card-disabbled a:focus,
 .card-disabbled a:hover {
-  color: #ffffff;
+  color: #dfdfdf;
   background-color: #777777;
 }
 
@@ -454,7 +487,7 @@
 }
 
 .card-button a {
-  background-color: #ffffff;
+  background-color: #dfdfdf;
   color: #121212;
   display: inline-flex;
   text-align: center;
@@ -465,7 +498,7 @@
 .card-button a:active,
 .card-button a:focus,
 .card-button a:hover {
-  color: #fff;
+  color: #dfdfdf;
   background-color: #212121;
 }
 
