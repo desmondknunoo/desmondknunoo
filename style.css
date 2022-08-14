@@ -6,25 +6,21 @@
 /* hero background image */
 /* .bgimage {
     height: 100vh;
-    background: url('images/heroImage.jpeg');
+    background: url('images/header.jpeg');
     background-size: cover;
     position: relative;
 } */
 
 .bgimage {
   height: 100vh;
-  background: linear-gradient(
-        45deg,
-        rgba(35, 14, 18, 0.7),
-        rgba(12, 31, 35, 0.7),
-        rgba(30, 31, 11, 0.7),
-        rgba(28, 11, 16, 0.7),
-        rgba(11, 28, 28, 0.7)
-      )
-      0 0 / 1000% no-repeat,
-    url(https://picsum.photos/g/2000/1200?image=6) 0 0 / cover no-repeat;
-  -webkit-animation: gradientAnimation 40s ease infinite;
-  animation: gradientAnimation 40s ease infinite;
+  -webkit-animation: gradientAnimation 15s ease infinite;
+  animation: gradientAnimation 15s ease infinite;
+}
+.bgimage {
+  height:100vh;
+  background: url('images/header.jpg');
+  background-size:cover;
+  position:relative;
 }
 @-webkit-keyframes gradientAnimation {
   0% {
@@ -292,6 +288,74 @@
     text-align: center;
   }
 }
+
+.social-icons-header {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.social-icons-header li {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.social-icons-header a {
+  color: #fff;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 4px;
+  margin-left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.social-icons-header a:active,
+.social-icons-header a:focus,
+.social-icons-header a:hover {
+  color: #212121;
+  background-color: #212121;
+}
+
+.social-icons-header a.facebook:hover {
+  background-color: #fff;
+}
+
+.social-icons-header a.twitter:hover {
+  background-color: #fff;
+}
+
+.social-icons-header a.linkedin:hover {
+  background-color: #fff;
+}
+
+.social-icons-header a.behance:hover {
+  background-color: #fff;
+}
+
+.social-icons-header a.instagram:hover {
+  background-color: #fff;
+}
+
+.social-icons-header a.github:hover {
+  background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
 
 .social-icons {
   padding-left: 0;
