@@ -12,16 +12,17 @@
 } */
 
 .bgimage2 {
-  background: url('images/header.jpg');
-  background-size:cover;
-  position:relative;  -webkit-animation: gradientAnimation 15s ease infinite;
+  background: url("images/header.jpg");
+  background-size: cover;
+  position: relative;
+  -webkit-animation: gradientAnimation 15s ease infinite;
   animation: gradientAnimation 15s ease infinite;
 }
 .bgimage {
-  height:100vh;
-  background: url('images/header.jpg');
-  background-size:cover;
-  position:relative;
+  height: 100vh;
+  background: url("images/header.jpg");
+  background-size: cover;
+  position: relative;
   -webkit-animation: gradientAnimation 15s ease infinite;
   animation: gradientAnimation 15s ease infinite;
 }
@@ -88,18 +89,16 @@
   color: #dfdfdf;
 }
 
-
-
 .about__content {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
   .about__content {
-      flex-direction: column-reverse;
-      align-items: initial;
+    flex-direction: column-reverse;
+    align-items: initial;
   }
 }
 
@@ -107,19 +106,16 @@
   margin-bottom: var(--gutter-normal);
 }
 
-@media(min-width: 901px) {
+@media (min-width: 901px) {
   .about__text {
-      flex: 0 0 35%;
+    flex: 0 0 35%;
   }
-  
+
   .about__photo-container {
-      flex: 1;
-      margin: 0 var(--gutter-huge) 0 0;
+    flex: 1;
+    margin: 0 var(--gutter-huge) 0 0;
   }
 }
-
-
-
 
 /* spacing on all sections */
 #services,
@@ -387,16 +383,6 @@
 .social-icons-header a.github:hover {
   background-color: #dfdfdf;
 }
-
-
-
-
-
-
-
-
-
-
 
 .social-icons {
   padding-left: 0;
