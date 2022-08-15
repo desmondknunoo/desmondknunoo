@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Desmond Kwame Nunoo</title>
 
@@ -28,15 +28,8 @@
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
 
-    <!-- Smartlook analytics -->
-    <script type='text/javascript'>
-        window.smartlook || (function (d) {
-            var o = smartlook = function () { o.api.push(arguments) }, h = d.getElementsByTagName('head')[0];
-            var c = d.createElement('script'); o.api = new Array(); c.async = true; c.type = 'text/javascript';
-            c.charset = 'utf-8'; c.src = 'https://web-sdk.smartlook.com/recorder.js'; h.appendChild(c);
-        })(document);
-        smartlook('init', 'ad56b54af391be51e6d4852f75b1b564b024f606', { region: 'eu' });
-    </script>
+    <!-- Add analytics here-->
+
 </head>
 
 <body>
@@ -49,7 +42,7 @@
                 </a>
             </div>
 
-            <!-- <a class="navbar-brand" href="#">Desmond</a> -->
+            <a class="navbar-brand" href="#">Desmond</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -65,7 +58,10 @@
                         <a class="nav-link" href="about.html">About</a>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Work</a>
+                        <a class="nav-link" href="work.html">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://instagram.com/desmondknunoo" target=”_blank”>Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -79,12 +75,12 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-                   
-                    <h1 class="hero_title">Desmond Kwame Nunoo</h1>
+
+                    <h1 class="hero_title" style="padding-left: 10%; padding-right:10%;">Desmond Kwame Nunoo</h1>
                     <h1 style="font-weight: 200; margin-left: 10%; margin-right: 10%;">I'm a Brand & Product Manager in
                         Accra, Ghana 🇬🇭</h1>
 
-                    <ul class="social-icons-header hero_desc">
+                    <ul class="social-icons-header hero_desc" style="padding-left: 10%; padding-right:10%;">
                         <li><a class="linkedin" href="https://linkedin.com/in/desmondknunoo" target=”_blank”><i
                                     class="fab fa-linkedin-in"></i></a></li>
                         <li><a class="behance" href="https://behance.net/desmondknunoo" target=”_blank”><i
@@ -93,10 +89,6 @@
                                     class="fab fa-twitter"></i></a></li>
                         <li><a class="github" href="https://github.com/desmondknunoo" target=”_blank”><i
                                     class="fab fa-github"></i></a></li>
-                        <li><a class="instagram" href="https://instagram.com/desmondknunoo" target=”_blank”><i
-                                    class="fab fa-instagram"></i></a></li>
-                        <li><a class="facebook" href="https://facebook.com/desmondknunoo" target=”_blank”><i
-                                    class="fab fa-facebook-f"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -107,27 +99,28 @@
     <!-- portfolio section-->
 
     <section id="portfolio">
-
         <div class="portfolio-text container mt-3">
-            <h1 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left"
-                style="color: #d7d7d7; margin-left: 2em; margin-right: 2em;">Selected Work</h1>
+            <h1 class="text-left" style="color: #d7d7d7; margin-left: 2em; margin-right: 2em;">Selected Work
+            </h1>
 
-            <!-- <h1 class="text-left" style="color: #d7d7d7; font-weight: 100; margin-left: 2em; margin-right: 2em;">
+            <h1 class="text-left" style="color: #d7d7d7; font-weight: 100; margin-left: 2em; margin-right: 2em;">
                 Designing and managing digital products. View full portfolio
-                <a class="link-text" style="font-weight: 300" href="portfolio.html">here</a>.
-            </h1> -->
+                <a class="link-text" style="font-weight: 300" href="work.html">here</a>.
+            </h1>
 
             <div class="row">
 
                 <div class="col-lg-4 mt-4">
-                    <img class="card-img-top" src="images/closeupImage.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body2">
-                        <div class="card2">
-                            <p class="card-text mt-3" style="font-weight: 200">GRAPHIC DESIGN • SOCIAL MEDIA • STRATEGY
+                    <div class="card2 portfolioContent">
+                        <img class="card-img-top" src="images/closeupImage.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <p class="card-text mt-3" style="font-weight: 200">GRAPHIC DESIGN • SOCIAL
+                                MEDIA • STRATEGY
                             </p>
                             <hr>
                             <h4 class="card-title" style="font-weight: 700">Closeup Promo</h4>
-                            <p class="card-text mt-3" style="font-weight: 200">COVID-19 social media campaign for
+                            <p class="card-text mt-3" style="font-weight: 200">COVID-19 social media
+                                campaign for
                                 Closeup.</p>
                             </p>
                             <div class="text-left card-button">
@@ -139,15 +132,16 @@
                 </div>
 
                 <div class="col-lg-4 mt-4">
-                    <div class="card2">
+                    <div class="card2 portfolioContent">
                         <img class="card-img-top" src="images/btfImage.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body2">
-                            <p class="card-text mt-3" style="font-weight: 200">BRANDING • PACKAGE DESIGN • GRAPHIC
+                        <div class="card-body">
+                            <p class="card-text mt-3" style="font-weight: 200">BRANDING • PACKAGE DESIGN •
+                                GRAPHIC
                                 DESIGN</p>
                             <hr>
                             <h4 class="card-title" style="font-weight: 700">Break The Fast</h4>
                             <p class="card-text mt-3" style="font-weight: 200">
-                                Sells yummy meals for breaking your fast.
+                                Vendor of yummy meals for breaking your fast.
                             </p>
                             <div class="text-left card-button">
                                 <a href="https://www.behance.net/gallery/90763875/Break-The-Fast-Brand-Identity"
@@ -158,15 +152,16 @@
                 </div>
 
                 <div class="col-lg-4 mt-4">
-                    <div class="card2">
+                    <div class="card2 portfolioContent">
                         <img class="card-img-top" src="images/ocanImage.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body2">
-                            <p class="card-text mt-3" style="font-weight: 200">BRANDING • PACKAGE DESIGN • GRAPHIC
+                        <div class="card-body">
+                            <p class="card-text mt-3" style="font-weight: 200">BRANDING • PACKAGE DESIGN •
+                                GRAPHIC
                                 DESIGN</p>
                             <hr>
                             <h4 class="card-title" style="font-weight: 700">OCAN</h4>
                             <p class="card-text mt-3" style="font-weight: 200">
-                                A sachet and bottled water company.</p>
+                                A sachet and bottled mineral water company.</p>
 
                             <div class="text-left card-button">
                                 <a href="https://www.behance.net/gallery/85272133/OCAN-Mineral-Water-Package-Design"
@@ -184,10 +179,12 @@
                     <div class="card2">
                         <img class="card-img-top" src="images/u4norImage.jpg" alt="Card image" style="width:100%">
                         <div class="card-body2">
-                            <p class="card-text mt-3" style="font-weight: 200">UI/UX • PRODUCT • MOBILE • ANDROID</p>
+                            <p class="card-text mt-3" style="font-weight: 200">UI/UX • PRODUCT • MOBILE •
+                                ANDROID</p>
                             <hr>
                             <h4 class="card-title" style="font-weight: 700">U4nor</h4>
-                            <p class="card-text mt-3" style="font-weight: 200">Relevant and reliable campus news curated
+                            <p class="card-text mt-3" style="font-weight: 200">Relevant and reliable campus
+                                news curated
                                 for tertiary students in Ghana.</p>
                             </p>
                             <div class="text-left col-md-4 col-sm-6 col-12">
@@ -196,7 +193,8 @@
                                             class="btn btn-secondary" target=”_blank”>Behance →</a>
                                     </li>
                                     <li><a href="https://play.google.com/store/apps/details?id=com.u4nor.android"
-                                            class="btn btn-secondary" target=”_blank”>Google Play Store →</a>
+                                            class="btn btn-secondary" target=”_blank”>Google Play Store
+                                            →</a>
                                     </li>
                                 </ul>
                             </div>
@@ -208,12 +206,15 @@
                     <div class="card2">
                         <img class="card-img-top" src="images/fudrinImage.jpg" alt="Card image" style="width:100%">
                         <div class="card-body2">
-                            <p class="card-text mt-3" style="font-weight: 200">UI/UX • PRODUCT • MOBILE • ANDROID</p>
+                            <p class="card-text mt-3" style="font-weight: 200">UI/UX • PRODUCT • MOBILE •
+                                ANDROID</p>
                             <hr>
                             <h4 class="card-title" style="font-weight: 700">Fudrin</h4>
                             <p class="card-text mt-3" style="font-weight: 200">
-                                Fudrin helps you turn your cooking abilities into everyday earning activity.</p>
-                            <p style="font-weight: 200"><strong style="font-weight: 600">Collaborator: </strong> Daniel
+                                Fudrin helps you turn your cooking abilities into everyday earning activity.
+                            </p>
+                            <p style="font-weight: 200"><strong style="font-weight: 600">Collaborator:
+                                </strong> Daniel
                                 Partey
                             </p>
                             <div class="text-left card-button">
@@ -228,16 +229,19 @@
                     <div class="card2">
                         <img class="card-img-top" src="images/opdImage.jpg" alt="Card image" style="width:100%">
                         <div class="card-body2">
-                            <p class="card-text mt-3" style="font-weight: 200">UI/UX • PRODUCT • MOBILE • ANDROID</p>
+                            <p class="card-text mt-3" style="font-weight: 200">UI/UX • PRODUCT • MOBILE •
+                                ANDROID</p>
                             <hr>
                             <h4 class="card-title" style="font-weight: 700">Orange Dictionary</h4>
-                            <p class="card-text mt-3" style="font-weight: 200">An offline dictionary containing
+                            <p class="card-text mt-3" style="font-weight: 200">An offline dictionary
+                                containing
                                 terms and their meanings for the publishing industry.</p>
                             <div class="text-left col-md-4 col-sm-6 col-12">
                                 <ul class="card-button">
 
                                     <li><a href="https://play.google.com/store/apps/details?id=com.deemiensa.dictionary"
-                                            class="btn btn-secondary" target=”_blank”>Google Play Store →</a>
+                                            class="btn btn-secondary" target=”_blank”>Google Play Store
+                                            →</a>
                                     </li>
 
                                     <li><a href="https://github.com/desmondknunoo/PublishingDictionary"
@@ -264,7 +268,7 @@
                 Let's work together. Send me an email
                 <a class="link-text" style="font-weight: 300" href="mailto:desmondknunoo@gmail.com">here</a>.
             </h1>
-            
+
         </div>
     </section>
     <!-- footer section-->
