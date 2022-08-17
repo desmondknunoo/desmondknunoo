@@ -74,7 +74,7 @@
 }
 
 .link-text:hover {
-  color: #ffffff;
+  color: #dfdfdf;
 }
 
 .services-text {
@@ -276,42 +276,42 @@
   width: 44px;
   height: 44px;
   text-align: center;
-  margin-right: 8px;
+  margin-right: 4px;
+  margin-left: 4px;
   border-radius: 100%;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-.social-icons a:active,
-.social-icons a:focus,
 .social-icons a:hover {
-  color: #212121;
+  color: #dfdfdf;
   background-color: #212121;
 }
 
+
 .social-icons a.facebook:hover {
-  background-color: #dfdfdf;
+  background-color: #212121;
 }
 
 .social-icons a.twitter:hover {
-  background-color: #dfdfdf;
+  background-color: #212121;
 }
 
 .social-icons a.linkedin:hover {
-  background-color: #dfdfdf;
+  background-color: #212121;
 }
 
 .social-icons a.behance:hover {
-  background-color: #dfdfdf;
+  background-color: #212121;
 }
 
 .social-icons a.instagram:hover {
-  background-color: #dfdfdf;
+  background-color: #212121;
 }
 
 .social-icons a.github:hover {
-  background-color: #dfdfdf;
+  background-color: #212121;
 }
 
 .card-disabbled {
@@ -404,7 +404,7 @@
 }
 
 .site-footer hr {
-  border-top-color: #bbb;
+  border-top-color: #dfdfdf;
   opacity: 0.5;
 }
 
@@ -421,7 +421,7 @@
 }
 
 .site-footer a {
-  color: #737373;
+  color: #dfdfdf;
 }
 
 .site-footer a:hover {
@@ -439,7 +439,7 @@
 }
 
 .footer-links a {
-  color: #737373;
+  color: #dfdfdf;
 }
 
 .footer-links a:hover {
@@ -458,7 +458,8 @@
   margin-left: 6px;
   margin-right: 0;
   border-radius: 100%;
-  background-color: #333333;
+  color: #737373;
+  background-color: #050505;
 }
 
 .copyright-text {
