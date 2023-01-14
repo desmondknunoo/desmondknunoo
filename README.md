@@ -1,5 +1,5 @@
 - 👋 Hi, I’m Desmond Kwame Nunoo (@desmondknunoo)
-- 👀 I’m interested in brand & product management
+- 👀 I’m interested in brand & product design
 - 📁 Checkout my portfolio on https://desmond-portfolio.vercel.app
 - 🌱 I’m currently learning front-end, Android & Flutter
 - 💞️ I’m looking to collaborate on open-source & social impact projects
