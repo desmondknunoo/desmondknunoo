@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Desmond Kwame Nunoo (@desmondknunoo)
-- 👀 I’m interested in software development & UI/UX design
+- 👀 I’m interested in multimedia design (graphic | UI/UX | 3D | motion | wordpress), robotics & software
 - 📁 Checkout my portfolio on https://desmond-portfolio.vercel.app
-- 🌱 I’m currently learning front-end, Android & Flutter
+- 🌱 I’m currently learning 3D modeling & printing 
 - 💞️ I’m looking to collaborate on open-source & social impact projects
 - 📫 Reach me via desmondknunoo@gmail.com
