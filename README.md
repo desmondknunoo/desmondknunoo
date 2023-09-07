@@ -1,4 +1,4 @@
-Desmond's Portfolio (HTML, CSS, JavaScript & Bootstrap 5)
+Desmond Kwame Nunoo's Portfolio (HTML, CSS, JavaScript & Bootstrap 5)
 =======
 
 My personal portfolio based on a template by [SampurnaC](https://github.com/SampurnaC).
