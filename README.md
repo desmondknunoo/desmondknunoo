@@ -1,5 +1,5 @@
 - 👋 Hi, I’m Desmond Kwame Nunoo (@desmondknunoo)
-- 👀 I’m interested in Data (analytics | database | research), Multimedia (graphic | publication | 3D | motion), Robotics (electronics | Arduino | Raspberry Pi | IoT | 3D printing) & Software (UI/UX | web | Android | iOS )
+- 👀 I’m interested in Design (Graphic, 3D, Motion, Product) & Tech (Robotics, Data, Web, Mobile)
 - 📁 Checkout my portfolio on https://desmond-portfolio.vercel.app
 - 🌱 I’m currently learning 3D modeling & printing 
 - 💞️ I’m looking to collaborate on open-source & social impact projects
