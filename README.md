@@ -1,5 +1,5 @@
 - 👋 Hi, I’m Desmond Kwame Nunoo (@desmondknunoo)
-- 👀 I’m interested in Design (Graphic, 3D, Motion, Product) & Tech (Robotics, Data, Web, Mobile)
+- 👀 I’m interested in Design (Graphic, 3D, Motion, Product) & Tech (Robotics, AI, Data, Web, Mobile)
 - 📁 Checkout my portfolio on https://desmond-portfolio.vercel.app
 - 🌱 I’m currently learning 3D modeling & printing 
 - 💞️ I’m looking to collaborate on open-source & social impact projects
