@@ -1,6 +1,5 @@
 - 👋 Hi, I’m Desmond Kwame Nunoo (@desmondknunoo)
-- 👀 I’m interested in Design (Graphic, 3D, Motion, Product) & Tech (Robotics, AI, Data, Web, Mobile)
-- 📁 Checkout my portfolio on https://desmond-portfolio.vercel.app
-- 🌱 I’m currently learning 3D modeling & printing 
+- 👀 Here is what I do: Managing Consultant @ Achendo | Design @ Tirah | Facilitator @ STEMR TECH LABS
+- 📁 Checkout Achendo here https://achendo.com
 - 💞️ I’m looking to collaborate on open-source & social impact projects
-- 📫 Reach me via desmondknunoo@gmail.com
+- 📫 Reach me via desmond@achendo.com
