@@ -1,5 +1,5 @@
 - 👋 Hi, I’m Desmond Kwame Nunoo (@desmondknunoo)
-- 👀 Here is what I do: Managing Consultant @ Achendo | Design @ Tirah | Facilitator @ STEMR TECH LABS
-- 📁 Checkout Achendo here https://achendo.com
+- 👀 I'm interested in Robotics | Artificial Intelligence | Internet of Things | 3D Design & Printing
+- 📁 Currently a Robotics Facilitator at STEMR Tech Labs (https://stemr.org) & an AI Mentor at Teens In AI (https://teensinai.com)
 - 💞️ I’m looking to collaborate on open-source & social impact projects
 - 📫 Reach me via desmond@achendo.com
