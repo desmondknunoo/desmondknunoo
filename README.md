@@ -1,5 +1,4 @@
 - 👋 Hi, I’m Desmond Kwame Nunoo (@desmondknunoo)
-- 👀 I'm interested in Robotics | Artificial Intelligence | Internet of Things | 3D Design & Printing
-- 📁 Currently a Robotics Facilitator at STEMR Tech Labs (https://stemr.org) & an AI Mentor at Teens In AI (https://teensinai.com)
+- 👀 I'm interested in STEM Education | Robotics | AI | IoT | 3D | Design | Print | Product | Motion
 - 💞️ I’m looking to collaborate on open-source & social impact projects
 - 📫 Reach me via desmondknunoo@gmail.com
