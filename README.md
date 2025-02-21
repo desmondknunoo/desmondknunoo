@@ -1,4 +1,4 @@
 - 👋 Hi, I’m Desmond Kwame Nunoo (@desmondknunoo)
-- 👀 I'm interested in STEM Education | Robotics | AI | IoT | 3D | Design | Print | Product | Motion
+- 👀 I'm interested in STEM Education | Robotics | AI | IoT | 3D
 - 💞️ I’m looking to collaborate on open-source & social impact projects
 - 📫 Reach me via desmondknunoo@gmail.com
