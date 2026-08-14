@@ -19,10 +19,10 @@ Technology professional, educator, and designer from Ghana specializing in emerg
 
 | Role | Organization |
 |---|---|
-| Senior Software Engineer | Innova Labs Ghana (Contract) |
 | Emerging Technologies Centre Coordinator | Lancaster University Ghana |
 | Robotics Facilitator | STEMR Tech Labs |
 | Founder & CEO | Achendo (design & production consultancy) |
+| Senior Software Engineer | Innova Labs Ghana (Contract) |
 | Android Developer / Product Manager | Apex & Over Ltd |
 | AI Consulting & UX Design Volunteer | United Nations Volunteers (Burundi) |
 | Lead Coordinator | Infinity STEM & Foundation |
