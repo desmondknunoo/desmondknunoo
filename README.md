@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Desmond Kwame Nunoo
 
-## Getting Started
+Technology professional, educator, and designer from Ghana specializing in emerging technologies and STEM education. Currently serves as the **Emerging Technologies Centre Coordinator** at Lancaster University Ghana, Accra.
 
-First, run the development server:
+## Background
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Education:** First Class Honours, Kwame Nkrumah University of Science and Technology (KNUST)
+- **Portfolio:** [desmondknunoo.com](https://desmondknunoo.com) | [Behance](https://behance.net/desmondknunoo)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Areas of Expertise
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Robotics & AI** — Microcontrollers (Raspberry Pi Pico), C++, MicroPython, Scratch, IoT, and AI/IoT integration
+- **Mobile & Web Development** — Kotlin/Android Studio, cross-platform systems, custom WebGL-to-Flutter physics engines
+- **3D Design & Motion Graphics** — Product rendering, spatial/event setups, motion visual assets
+- **Product Management** — User-friendly tech product design and data-driven software solutions
+- **STEM Education** — Curriculum design, facilitator training, and competitive robotics coaching
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Professional Experience
 
-## Learn More
+| Role | Organization |
+|---|---|
+| Emerging Technologies Centre Coordinator | Lancaster University Ghana |
+| Robotics Facilitator | STEMR Tech Labs |
+| Founder & CEO | Achendo (design & production consultancy) |
+| Android Developer / Product Manager | Apex & Over Ltd |
+| AI Consulting & UX Design Volunteer | United Nations Volunteers (Burundi) |
+| Lead Coordinator | Infinity STEM & Foundation |
+| Program Coordinator | The Juste Foundation |
+| 3D / Brand Designer | Sodium Brand Solutions, Pageline Concepts |
 
-To learn more about Next.js, take a look at the following resources:
+## Notable Achievements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Coached student team to **1st place** in the Stars League at the 2024 Ghana Robotics Competition with a Raspberry Pi Pico-powered "HoleyBot"
+- Built production Android apps: Abakosem, U4nor, Fudrin; led the Zero Schools Under Trees web mapping database
+- Capstone project: **The Orange Offline Publishing Dictionary** — native Kotlin Android app with 5,000+ offline terms
+- Contributed UI/UX designs for cloud-native management software via Layer5/Meshery open-source communities
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Collaborations & Partnerships
 
-## Deploy on Vercel
+United Nations, British Council Ghana, MTN Ghana, mPharma, Ghana Tourism Authority, FDA Ghana, Teens In AI, DataKirk, BOST, Scania West Africa
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Technical Focus
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Advocates for cloud/browser-based hardware simulation (Wokwi, Autodesk Tinkercad Circuits) to streamline prototyping before physical deployment. Emphasizes structured testing methodologies across mobile and web architectures.
