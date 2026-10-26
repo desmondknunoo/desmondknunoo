@@ -5,7 +5,7 @@ Technology professional, educator, and designer from Ghana specializing in emerg
 ## Background
 
 - **Education:** First Class Honours, Kwame Nkrumah University of Science and Technology (KNUST)
-- **Portfolio:** [desmondknunoo.com](https://desmondknunoo.com) | [Behance](https://behance.net/desmondknunoo)
+- **Portfolio:** [desmondknunoo.com](https://desmondknunoo.com)
 
 ## Areas of Expertise
 
@@ -16,18 +16,7 @@ Technology professional, educator, and designer from Ghana specializing in emerg
 - **STEM Education** — Curriculum design, facilitator training, and competitive robotics coaching
 
 ## Professional Experience
-
-| Role | Organization |
-|---|---|
-| Emerging Technologies Centre Coordinator | Lancaster University Ghana |
-| Robotics Facilitator | STEMR Tech Labs |
-| Founder & CEO | Achendo (design & production consultancy) |
-| Senior Software Engineer | Innova Labs Ghana (Contract) |
-| Android Developer / Product Manager | Apex & Over Ltd |
-| AI Consulting & UX Design Volunteer | United Nations Volunteers (Burundi) |
-| Lead Coordinator | Infinity STEM & Foundation |
-| Program Coordinator | The Juste Foundation |
-| 3D / Brand Designer | Sodium Brand Solutions, Pageline Concepts |
+Check my LinkedIn:[Desmond Kwame Nunoo](https://linkedin.com/in/desmondknunoo)
 
 **Innova Labs Ghana (Jan 2026 - Present):** Co-developed an enterprise React application streamlining corporate workflows. Built a cross-platform Google Scratch-based IDE for local microcontrollers, enabling Ghanaian children to program locally manufactured robotics kits.
 
