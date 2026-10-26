@@ -19,11 +19,7 @@ Technology professional, educator, and designer from Ghana specializing in emerg
 Check my LinkedIn:[Desmond Kwame Nunoo](https://linkedin.com/in/desmondknunoo)
 
 ## Notable Achievements
-
-- Coached student team to **1st place** in the Stars League at the 2024 Ghana Robotics Competition with a Raspberry Pi Pico-powered "HoleyBot"
-- Built production Android apps: Abakosem, U4nor, Fudrin; led the Zero Schools Under Trees web mapping database
-- Capstone project: **The Orange Offline Publishing Dictionary** — native Kotlin Android app with 5,000+ offline terms
-- Contributed UI/UX designs for cloud-native management software via Layer5/Meshery open-source communities
+Check my LinkedIn:[desmondknunoo.com](https://desmondknunoo.com)
 
 ## Collaborations & Partnerships
 
