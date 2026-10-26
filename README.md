@@ -18,8 +18,6 @@ Technology professional, educator, and designer from Ghana specializing in emerg
 ## Professional Experience
 Check my LinkedIn:[Desmond Kwame Nunoo](https://linkedin.com/in/desmondknunoo)
 
-**Innova Labs Ghana (Jan 2026 - Present):** Co-developed an enterprise React application streamlining corporate workflows. Built a cross-platform Google Scratch-based IDE for local microcontrollers, enabling Ghanaian children to program locally manufactured robotics kits.
-
 ## Notable Achievements
 
 - Coached student team to **1st place** in the Stars League at the 2024 Ghana Robotics Competition with a Raspberry Pi Pico-powered "HoleyBot"
