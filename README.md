@@ -16,10 +16,10 @@ Technology professional, educator, and designer from Ghana specializing in emerg
 - **STEM Education** — Curriculum design, facilitator training, and competitive robotics coaching
 
 ## Professional Experience
-Check my LinkedIn:[Desmond Kwame Nunoo](https://linkedin.com/in/desmondknunoo)
+Check my LinkedIn: [Desmond Kwame Nunoo](https://linkedin.com/in/desmondknunoo)
 
 ## Notable Achievements
-Check my LinkedIn:[desmondknunoo.com](https://desmondknunoo.com)
+Check my LinkedIn: [desmondknunoo.com](https://desmondknunoo.com)
 
 ## Collaborations & Partnerships
 
