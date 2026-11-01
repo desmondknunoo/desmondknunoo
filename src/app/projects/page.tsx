@@ -17,16 +17,6 @@ const additionalProjects = [
         details:
             'Coached a student team to first place in the Stars League at the 2024 Ghana Robotics Competition. The team built the robot with a Raspberry Pi Pico.',
     },
-    {
-        title: 'Zero Schools Under Trees',
-        details:
-            'Led product design and management for a web application and mapping database covering more than 5,000 schools.',
-    },
-    {
-        title: 'The Orange Offline Publishing Dictionary',
-        details:
-            'Developed a native Kotlin Android application with an offline database of more than 5,000 terms as a final-year project.',
-    },
 ]
 
 export default function ProjectsPage() {
