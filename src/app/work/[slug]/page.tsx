@@ -22,7 +22,7 @@ export default async function WorkDetailPage({
 
     return (
         <main className="min-h-screen bg-zinc-950">
-            <div className="relative h-[45vh] min-h-[320px] w-full overflow-hidden">
+            <div data-scroll-reveal className="relative h-[45vh] min-h-[320px] w-full overflow-hidden">
                 <Image
                     src={item.thumbnail}
                     alt={item.title}

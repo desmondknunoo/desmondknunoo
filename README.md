@@ -34,14 +34,14 @@ Technology professional, educator, and designer from Ghana specializing in emerg
 ## Notable Achievements
 
 - Coached student team to **1st place** in the Stars League at the 2024 Ghana Robotics Competition with a Raspberry Pi Pico-powered "HoleyBot"
-- Built production Android apps: Abakosem, U4nor, Fudrin; led the Zero Schools Under Trees web mapping database
-- Capstone project: **The Orange Offline Publishing Dictionary** — native Kotlin Android app with 5,000+ offline terms
-- Contributed UI/UX designs for cloud-native management software via Layer5/Meshery open-source communities
+- Contributed to Antrak Express’s delivery management software suite and developed InnoCode for programming local microcontrollers
+- Developed and contributed to software through Achendo, including Fluid, Squeeze, Keyring, and Abakosem Puzzle
+- Contributed to InnoKit, a robotics learning kit
 
 ## Collaborations & Partnerships
 
-United Nations, British Council Ghana, MTN Ghana, mPharma, Ghana Tourism Authority, FDA Ghana, Teens In AI, DataKirk, BOST, Scania West Africa
+United Nations Volunteers, British Council Ghana, MTN Ghana, mPharma, Ghana Tourism Authority, FDA Ghana, Teens In AI, DataKirk, BOST, Scania West Africa
 
 ## Technical Focus
 
-Advocates for cloud/browser-based hardware simulation (Wokwi, Autodesk Tinkercad Circuits) to streamline prototyping before physical deployment. Emphasizes structured testing methodologies across mobile and web architectures.
+Focuses on artificial intelligence (AI), machine learning (ML), IoT and AIoT, augmented and virtual reality (AR/VR), 3D modelling and printing, and software development. Builds microcontroller-based systems integrating sensors, actuators, displays, and power components, alongside web, mobile, and connected-device software.

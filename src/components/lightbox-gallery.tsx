@@ -7,17 +7,20 @@ import { ArrowLeft, ArrowRight, ExternalLink, X } from "lucide-react";
 type GalleryImage = {
     src: string;
     alt: string;
+    fit?: "cover" | "contain";
 };
 
 type LightboxGalleryProps = {
     images: GalleryImage[];
-    postUrl: string;
-    layout?: "bento" | "pair" | "featured";
+    postUrl?: string;
+    sourceLabel?: string;
+    layout?: "bento" | "pair" | "featured" | "grid";
 };
 
 export function LightboxGallery({
     images,
     postUrl,
+    sourceLabel = "View original post",
     layout = "bento",
 }: LightboxGalleryProps) {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -45,7 +48,9 @@ export function LightboxGallery({
     };
 
     const gridClass =
-        layout === "featured"
+        layout === "grid"
+            ? `grid grid-cols-1 gap-4 sm:grid-cols-2 ${images.length > 2 ? "lg:grid-cols-3" : ""}`
+            : layout === "featured"
             ? "grid grid-cols-1"
             : layout === "pair"
               ? "grid grid-cols-2 gap-3 sm:gap-4"
@@ -56,7 +61,9 @@ export function LightboxGallery({
             <div className={gridClass}>
                 {images.map((image, index) => {
                     const tileClass =
-                        layout === "featured"
+                        layout === "grid"
+                            ? "aspect-[4/3]"
+                            : layout === "featured"
                             ? "aspect-[4/3] sm:aspect-[16/9]"
                             : layout === "pair"
                               ? "aspect-square sm:aspect-[4/3]"
@@ -78,13 +85,15 @@ export function LightboxGallery({
                                 src={image.src}
                                 alt={image.alt}
                                 fill
-                                quality={25}
+                                quality={75}
                                 sizes={
-                                    layout === "featured"
+                                    layout === "grid"
+                                        ? `(max-width: 640px) 100vw, (max-width: 1024px) 50vw, ${images.length > 2 ? "33vw" : "50vw"}`
+                                        : layout === "featured"
                                         ? "(max-width: 896px) 100vw, 896px"
                                         : "(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
                                 }
-                                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                className={`${image.fit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-500 motion-reduce:transition-none group-hover:scale-[1.03] motion-reduce:group-hover:scale-100`}
                             />
                             <span className="sr-only">Open in lightbox</span>
                         </button>
@@ -155,17 +164,17 @@ export function LightboxGallery({
                                 </>
                             )}
                         </div>
-                        <div className="flex justify-end px-4 py-3 sm:px-6">
+                        {postUrl && <div className="flex justify-end px-4 py-3 sm:px-6">
                             <a
                                 href={postUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex min-h-11 items-center gap-2 text-sm text-zinc-300 underline decoration-zinc-700 underline-offset-4 hover:text-white hover:decoration-white"
                             >
-                                View original post
+                                {sourceLabel}
                                 <ExternalLink className="h-4 w-4" />
                             </a>
-                        </div>
+                        </div>}
                     </div>
                 )}
             </dialog>

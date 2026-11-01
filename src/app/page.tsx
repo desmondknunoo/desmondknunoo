@@ -3,18 +3,12 @@ import { HeroParallax } from "@/components/ui/hero-parallax";
 import { LogoSlider } from "@/components/logo-slider";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
-import { workItems } from "@/lib/work";
-
-const products = workItems.map((item) => ({
-  title: item.title,
-  link: `/work/${item.slug}`,
-  thumbnail: item.thumbnail,
-}));
+import { landingHighlights } from "@/lib/landing-highlights";
 
 export default function Home() {
   return (
     <main className="bg-black">
-      <HeroParallax products={products} />
+      <HeroParallax products={landingHighlights} />
       <LogoSlider />
       <ContactSection />
       <Footer />

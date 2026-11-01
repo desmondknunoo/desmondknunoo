@@ -1,7 +1,7 @@
 'use client';
 import { cn } from '@/lib/utils';
 import { useMotionValue, animate, motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import useMeasure from 'react-use-measure';
 
 type InfiniteSliderProps = {
@@ -14,6 +14,7 @@ type InfiniteSliderProps = {
     className?: string;
     speed?: number;
     speedOnHover?: number;
+    pauseOnHover?: boolean;
 };
 
 export function InfiniteSlider({
@@ -26,6 +27,7 @@ export function InfiniteSlider({
     className,
     speed,
     speedOnHover,
+    pauseOnHover = false,
 }: InfiniteSliderProps) {
     // Support both duration and speed props
     const actualDuration = speed ? 1000 / speed : duration;
@@ -36,6 +38,8 @@ export function InfiniteSlider({
     const translation = useMotionValue(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
     const [key, setKey] = useState(0);
+    const animationControls = useRef<ReturnType<typeof animate> | null>(null);
+    const isHovered = useRef(false);
 
     useEffect(() => {
         let controls;
@@ -67,7 +71,10 @@ export function InfiniteSlider({
             });
         }
 
-        return controls?.stop;
+        animationControls.current = controls;
+        if (pauseOnHover && isHovered.current) controls.pause();
+
+        return () => controls.stop();
     }, [
         key,
         translation,
@@ -78,9 +85,10 @@ export function InfiniteSlider({
         isTransitioning,
         direction,
         reverse,
+        pauseOnHover,
     ]);
 
-    const hoverProps = actualDurationOnHover
+    const hoverProps = !pauseOnHover && actualDurationOnHover
         ? {
             onHoverStart: () => {
                 setIsTransitioning(true);
@@ -94,7 +102,17 @@ export function InfiniteSlider({
         : {};
 
     return (
-        <div className={cn('overflow-hidden', className)}>
+        <div
+            className={cn('overflow-hidden', className)}
+            onMouseEnter={pauseOnHover ? () => {
+                isHovered.current = true;
+                animationControls.current?.pause();
+            } : undefined}
+            onMouseLeave={pauseOnHover ? () => {
+                isHovered.current = false;
+                animationControls.current?.play();
+            } : undefined}
+        >
             <motion.div
                 className='flex w-max'
                 style={{

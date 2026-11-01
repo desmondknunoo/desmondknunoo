@@ -1,0 +1,53 @@
+import type { ReactNode } from 'react'
+import Link from 'next/link'
+import { ArrowLeft } from 'lucide-react'
+import { Footer } from '@/components/footer'
+import { CollapsibleSection } from '@/components/collapsible-section'
+import { SiteNav } from '@/components/site-nav'
+
+type SectionPageProps = {
+    title: string
+    description: string
+    children: ReactNode
+    collapsible?: boolean
+}
+
+export function SectionPage({ title, description, children, collapsible = true }: SectionPageProps) {
+    return (
+        <main className="min-h-screen bg-zinc-950 text-zinc-100">
+            <div className="mx-auto max-w-7xl px-6 pt-8 md:px-12 md:pt-10">
+                <header className="flex items-center justify-between gap-5">
+                    <Link href="/" className="shrink-0 text-sm font-semibold tracking-wide text-zinc-200">
+                        DKN
+                    </Link>
+                    <SiteNav />
+                </header>
+
+                <Link
+                    href="/"
+                    className="mt-16 inline-flex min-h-11 items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300"
+                >
+                    <ArrowLeft className="h-4 w-4" />
+                    Home
+                </Link>
+
+                <CollapsibleSection
+                    title={title}
+                    headingLevel="h1"
+                    collapsible={collapsible}
+                    className="border-b border-zinc-800 py-12 md:py-16"
+                    summaryClassName="py-0"
+                    titleClassName="max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl"
+                    contentClassName="mt-5 pb-0"
+                >
+                    <p className="max-w-2xl text-lg leading-8 text-zinc-300">
+                        {description}
+                    </p>
+                </CollapsibleSection>
+
+                <div className="pb-16">{children}</div>
+            </div>
+            <Footer />
+        </main>
+    )
+}

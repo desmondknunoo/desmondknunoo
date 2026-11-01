@@ -18,6 +18,7 @@ export const HeroParallax = ({
         title: string;
         link: string;
         thumbnail: string;
+        position?: string;
     }[];
 }) => {
     const firstRow = products.slice(0, 5);
@@ -104,7 +105,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
     return (
-        <div className="max-w-7xl relative mx-auto px-6 pt-8 md:px-12 md:pt-10 w-full left-0 top-0">
+        <div className="max-w-7xl relative z-20 mx-auto px-6 pt-8 md:px-12 md:pt-10 w-full left-0 top-0">
             <div className="mb-20 flex items-center justify-between gap-5 md:mb-32">
                 <Link href="/" className="text-sm font-semibold tracking-wide text-zinc-200">
                     DKN
@@ -129,6 +130,7 @@ export const ProductCard = ({
         title: string;
         link: string;
         thumbnail: string;
+        position?: string;
     };
     translate: MotionValue<number>;
 }) => {
@@ -145,18 +147,19 @@ export const ProductCard = ({
         >
             <Link
                 href={product.link}
-                className="block group-hover/product:shadow-2xl "
+                className="block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white group-hover/product:shadow-2xl"
             >
                 <Image
                     src={product.thumbnail}
                     height="600"
                     width="600"
-                    className="object-cover object-left-top absolute h-full w-full inset-0"
+                    className="object-cover absolute h-full w-full inset-0"
+                    style={{ objectPosition: product.position ?? "center" }}
                     alt={product.title}
                 />
             </Link>
             <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-            <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
+            <h2 className="absolute bottom-4 left-4 opacity-100 md:opacity-0 group-hover/product:opacity-100 group-focus-within/product:opacity-100 text-white bg-black/70 px-3 py-2">
                 {product.title}
             </h2>
         </motion.div>

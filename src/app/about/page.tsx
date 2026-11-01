@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, Mail } from "lucide-react";
 import { Footer } from "@/components/footer";
+import { CollapsibleSection } from "@/components/collapsible-section";
 import { SiteNav } from "@/components/site-nav";
 
 export const metadata: Metadata = {
@@ -256,44 +257,48 @@ const education = [
 
 const expertise = [
     {
-        area: "Robotics & AI",
+        area: "Programming Skills",
         details:
-            "Microcontrollers including Raspberry Pi Pico, C++, MicroPython, Scratch, IoT, and AI/IoT integration.",
+            "Python, C++, Flutter, Scratch, InnoCode, PictoBlox, WeeeCode, MERN/PERN, NEXT+PG, and full-stack JavaScript frameworks.",
     },
     {
-        area: "Mobile & Web Development",
+        area: "AI Skills",
         details:
-            "Kotlin and Android Studio, cross-platform systems, and custom WebGL-to-Flutter physics engines.",
+            "Google Open Buildings, Google WAXAL, Ghana NLP, Moremi, Hugging Face, Kaggle, model distillation, open-weight models, prompt-context-loop engineering, Google CoLab, TensorFlow, and PyTorch.",
     },
     {
-        area: "3D Design & Motion Graphics",
+        area: "IoT, Microcontrollers & Kits",
         details:
-            "Product rendering, spatial and event setups, and motion graphics.",
+            "Arduino, Raspberry Pi, Nvidia Jetson, BBC micro:bit, WeeeMake Kits, MC 4.0 Kits, InnoKits, XploreBot, HoleyBot, Hiwonder Kit, and LEGO kits.",
     },
     {
-        area: "Product Management",
-        details:
-            "User-friendly technology products and data-driven software solutions.",
+        area: "3D Modeling Tools",
+        details: "OnShape, SketchUp, and CADCraft.",
     },
     {
-        area: "STEM Education",
+        area: "Robotics Technologies",
         details:
-            "Curriculum design, facilitator training, and competitive robotics coaching.",
+            "Unitree GO 2 EDU Quadruped, Mercury X1 Humanoid, Elephant Robotics Cobot Arms, 3D printing, Meta Quest VR/AR, Voltera PCB Printing, vriz, and Gazebo.",
+    },
+    {
+        area: "AI & ML Tools",
+        details:
+            "Claude Code, GPT Codex, SpaceXAI Cursor, Replit, Lovable, Open Code, Ollama, LM Studio, Bolt.dev, Gemini, Google AI Tools, and Teachable Machine.",
     },
 ];
 
 const achievements = [
     "Coached a student team to first place in the Stars League at the 2024 Ghana Robotics Competition with a Raspberry Pi Pico-powered HoleyBot.",
-    "Built production Android apps including Abakosem, U4nor, and Fudrin, and led the Zero Schools Under Trees web mapping database.",
-    "Developed The Orange Offline Publishing Dictionary, a native Kotlin Android capstone app with more than 5,000 offline terms.",
-    "Contributed UI/UX design to cloud-native management software through the Layer5 and Meshery open-source communities.",
+    "Contributed to Antrak Express’s delivery management software suite and developed InnoCode for programming local microcontrollers.",
+    "Developed and contributed to software through Achendo, including Fluid, Squeeze, Keyring, and Abakosem Puzzle.",
+    "Contributed to InnoKit, a robotics learning kit.",
 ];
 
 const collaborators =
-    "United Nations, British Council Ghana, MTN Ghana, mPharma, Ghana Tourism Authority, FDA Ghana, Teens In AI, DataKirk, BOST, and Scania West Africa.";
+    "United Nations Volunteers, British Council Ghana, MTN Ghana, mPharma, Ghana Tourism Authority, FDA Ghana, Teens In AI, DataKirk, BOST, and Scania West Africa.";
 
 const technicalFocus =
-    "I advocate for cloud- and browser-based hardware simulation, including Wokwi and Autodesk Tinkercad Circuits, to streamline prototyping before physical deployment. I also emphasize structured testing across mobile and web architectures.";
+    "My technical focus spans artificial intelligence (AI), machine learning (ML), the Internet of Things (IoT), and AI-powered connected systems (AIoT). I work with augmented and virtual reality (AR/VR), 3D modelling and printing, and microcontroller-based systems that integrate sensors, actuators, displays, and power components. Software development connects these areas, from web and mobile applications to the software that powers connected devices.";
 
 const certifications = [
     {
@@ -354,19 +359,21 @@ export default function AboutPage() {
                     Back to portfolio
                 </Link>
 
-                <section className="grid gap-8 border-b border-zinc-800 py-12 lg:grid-cols-[1fr_20rem] lg:items-end lg:py-20">
-                    <div>
-                        <h1 className="max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl">
-                            About me
-                        </h1>
-                        <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
-                            I&apos;m Desmond Kwame Nunoo, a technology professional,
-                            STEM educator, and designer based in Ghana. I bring
-                            together software, robotics, AI, and design to help
-                            people turn ideas into useful products and learning
-                            experiences.
-                        </p>
-                    </div>
+                <CollapsibleSection
+                    title="About me"
+                    headingLevel="h1"
+                    className="border-b border-zinc-800 py-12 lg:py-20"
+                    summaryClassName="py-0"
+                    titleClassName="max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl"
+                    contentClassName="grid gap-8 pt-6 pb-0 lg:grid-cols-[1fr_20rem] lg:items-end"
+                >
+                    <p className="max-w-3xl text-lg leading-8 text-zinc-300">
+                        I&apos;m Desmond Kwame Nunoo, a technology professional,
+                        STEM educator, and designer based in Ghana. I bring
+                        together software, robotics, AI, and design to help
+                        people turn ideas into useful products and learning
+                        experiences.
+                    </p>
                     <div className="text-sm leading-6 text-zinc-400 lg:justify-self-end">
                         <p className="font-medium text-zinc-100">Accra, Ghana</p>
                         <p>STEM education · Robotics · AI · Product design</p>
@@ -378,16 +385,16 @@ export default function AboutPage() {
                             Get in touch
                         </Link>
                     </div>
-                </section>
+                </CollapsibleSection>
 
-                <section className="grid gap-8 border-b border-zinc-800 py-12 lg:grid-cols-[14rem_1fr] lg:gap-16 lg:py-16">
-                    <div>
-                        <h2 className="text-2xl font-semibold">Areas of expertise</h2>
-                        <p className="mt-3 text-sm leading-6 text-zinc-400">
-                            A multidisciplinary toolkit across technology,
-                            product, design, and education.
-                        </p>
-                    </div>
+                <CollapsibleSection
+                    title="Areas of expertise"
+                    summaryDescription="A multidisciplinary toolkit across technology, product, design, and education."
+                    className="py-12 lg:py-16"
+                    summaryClassName="py-0 lg:grid lg:grid-cols-[14rem_1fr] lg:gap-16"
+                    titleClassName="text-2xl font-semibold"
+                    contentClassName="pt-6 lg:pl-[calc(14rem+4rem)]"
+                >
                     <dl className="divide-y divide-zinc-800">
                         {expertise.map((item) => (
                             <div key={item.area} className="grid gap-2 py-5 first:pt-0 sm:grid-cols-[13rem_1fr] sm:gap-6">
@@ -396,34 +403,35 @@ export default function AboutPage() {
                             </div>
                         ))}
                     </dl>
-                </section>
+                </CollapsibleSection>
 
-                <section className="grid gap-8 border-b border-zinc-800 py-12 lg:grid-cols-[14rem_1fr] lg:gap-16 lg:py-16">
-                    <div>
-                        <h2 className="text-2xl font-semibold">Experience</h2>
-                        <p className="mt-3 text-sm leading-6 text-zinc-400">
-                            Building technology and learning programs across
-                            software, robotics, design, and education.
-                        </p>
-                    </div>
+                <CollapsibleSection
+                    title="Experience"
+                    summaryDescription="Building technology and learning programs across software, robotics, design, and education."
+                    className="py-12 lg:py-16"
+                    summaryClassName="py-0 lg:grid lg:grid-cols-[14rem_1fr] lg:gap-16"
+                    titleClassName="text-2xl font-semibold"
+                    contentClassName="pt-6 lg:pl-[calc(14rem+4rem)]"
+                >
                     <div className="divide-y divide-zinc-800">
                         {experience.map((item) => (
-                            <article key={`${item.organization}-${item.role}`} className="py-7 first:pt-0 last:pb-0">
-                                <div className="flex flex-col justify-between gap-2 sm:flex-row sm:gap-6">
-                                    <div>
-                                        <h3 className="text-lg font-medium">{item.role}</h3>
-                                        <p className="mt-1 text-zinc-300">
-                                            {item.organization}
-                                            <span className="text-zinc-500"> · {item.type}</span>
-                                        </p>
-                                    </div>
-                                    <p className="shrink-0 text-sm text-zinc-400 sm:text-right">
-                                        {item.dates}
-                                        <span className="mt-1 block">{item.location}</span>
-                                    </p>
-                                </div>
+                            <CollapsibleSection
+                                key={`${item.organization}-${item.role}`}
+                                title={item.role}
+                                headingLevel="h3"
+                                summaryDescription={`${item.organization} · ${item.type}`}
+                                summaryDescriptionClassName="!mt-1 text-zinc-300"
+                                initiallyOpen={false}
+                                className="py-5"
+                                summaryClassName="py-0"
+                                titleClassName="text-lg font-medium"
+                                contentClassName="mt-4 grid gap-4 pb-0 sm:grid-cols-[14rem_minmax(0,1fr)]"
+                            >
+                                <p className="text-sm leading-6 text-zinc-400 sm:order-2 sm:text-right">
+                                    {item.dates}<span className="mt-1 block">{item.location}</span>
+                                </p>
                                 {item.details.length > 0 && (
-                                    <ul className="mt-4 max-w-3xl space-y-2 text-sm leading-6 text-zinc-300">
+                                    <ul className="space-y-2 text-sm leading-6 text-zinc-300 sm:order-1">
                                         {item.details.map((detail) => (
                                             <li key={detail} className="flex gap-3">
                                                 <span aria-hidden="true" className="text-zinc-500">—</span>
@@ -432,19 +440,19 @@ export default function AboutPage() {
                                         ))}
                                     </ul>
                                 )}
-                            </article>
+                            </CollapsibleSection>
                         ))}
                     </div>
-                </section>
+                </CollapsibleSection>
 
-                <section className="grid gap-8 border-b border-zinc-800 py-12 lg:grid-cols-[14rem_1fr] lg:gap-16 lg:py-16">
-                    <div>
-                        <h2 className="text-2xl font-semibold">Notable achievements</h2>
-                        <p className="mt-3 text-sm leading-6 text-zinc-400">
-                            Selected outcomes from software, robotics, and
-                            open-source work.
-                        </p>
-                    </div>
+                <CollapsibleSection
+                    title="Notable achievements"
+                    summaryDescription="Selected outcomes from software, robotics, and open-source work."
+                    className="py-12 lg:py-16"
+                    summaryClassName="py-0 lg:grid lg:grid-cols-[14rem_1fr] lg:gap-16"
+                    titleClassName="text-2xl font-semibold"
+                    contentClassName="pt-6 lg:pl-[calc(14rem+4rem)]"
+                >
                     <ul className="max-w-3xl divide-y divide-zinc-800">
                         {achievements.map((achievement) => (
                             <li key={achievement} className="py-5 first:pt-0">
@@ -452,57 +460,69 @@ export default function AboutPage() {
                             </li>
                         ))}
                     </ul>
-                </section>
+                </CollapsibleSection>
 
-                <section className="grid gap-8 border-b border-zinc-800 py-12 lg:grid-cols-[14rem_1fr] lg:gap-16 lg:py-16">
+                <CollapsibleSection
+                    title="Education"
+                    summaryDescription="A foundation in science, programming, and design."
+                    className="py-12 lg:py-16"
+                    summaryClassName="py-0 lg:grid lg:grid-cols-[14rem_1fr] lg:gap-16"
+                    titleClassName="text-2xl font-semibold"
+                    contentClassName="pt-6 lg:pl-[calc(14rem+4rem)]"
+                >
                     <div>
-                        <h2 className="text-2xl font-semibold">Education</h2>
-                        <p className="mt-3 text-sm leading-6 text-zinc-400">
-                            A foundation in science, programming, and design.
-                        </p>
-                    </div>
-                    <div className="divide-y divide-zinc-800">
                         {education.map((item) => (
-                            <article key={item.school} className="py-6 first:pt-0 last:pb-0">
-                                <h3 className="text-lg font-medium">{item.school}</h3>
-                                <p className="mt-1 text-sm leading-6 text-zinc-300">{item.qualification}</p>
-                                <p className="mt-3 text-sm leading-6 text-zinc-400">{item.details}</p>
-                            </article>
+                            <CollapsibleSection
+                                key={item.school}
+                                title={item.school}
+                                headingLevel="h3"
+                                summaryDescription={item.qualification}
+                                summaryDescriptionClassName="!mt-1 text-zinc-300"
+                                initiallyOpen={false}
+                                className="py-5"
+                                summaryClassName="py-0"
+                                titleClassName="text-lg font-medium"
+                            >
+                                <p className="text-sm leading-6 text-zinc-400">{item.details}</p>
+                            </CollapsibleSection>
                         ))}
                     </div>
-                </section>
+                </CollapsibleSection>
 
-                <section className="grid gap-8 border-b border-zinc-800 py-12 lg:grid-cols-[14rem_1fr] lg:gap-16 lg:py-16">
-                    <div>
-                        <h2 className="text-2xl font-semibold">Collaborations</h2>
-                        <p className="mt-3 text-sm leading-6 text-zinc-400">
-                            Organizations and teams I&apos;ve worked with.
-                        </p>
-                    </div>
+                <CollapsibleSection
+                    title="Collaborations"
+                    summaryDescription="Organizations and teams I&apos;ve worked with."
+                    className="py-12 lg:py-16"
+                    summaryClassName="py-0 lg:grid lg:grid-cols-[14rem_1fr] lg:gap-16"
+                    titleClassName="text-2xl font-semibold"
+                    contentClassName="pt-6 lg:pl-[calc(14rem+4rem)]"
+                >
                     <p className="max-w-3xl text-sm leading-7 text-zinc-300">
                         {collaborators}
                     </p>
-                </section>
+                </CollapsibleSection>
 
-                <section className="grid gap-8 border-b border-zinc-800 py-12 lg:grid-cols-[14rem_1fr] lg:gap-16 lg:py-16">
-                    <div>
-                        <h2 className="text-2xl font-semibold">Technical focus</h2>
-                        <p className="mt-3 text-sm leading-6 text-zinc-400">
-                            How I approach building and testing technology.
-                        </p>
-                    </div>
+                <CollapsibleSection
+                    title="Technical focus"
+                    summaryDescription="AI, connected hardware, immersive technology, 3D design, and software development."
+                    className="py-12 lg:py-16"
+                    summaryClassName="py-0 lg:grid lg:grid-cols-[14rem_1fr] lg:gap-16"
+                    titleClassName="text-2xl font-semibold"
+                    contentClassName="pt-6 lg:pl-[calc(14rem+4rem)]"
+                >
                     <p className="max-w-3xl text-sm leading-7 text-zinc-300">
                         {technicalFocus}
                     </p>
-                </section>
+                </CollapsibleSection>
 
-                <section className="grid gap-8 py-12 lg:grid-cols-[14rem_1fr] lg:gap-16 lg:py-16">
-                    <div>
-                        <h2 className="text-2xl font-semibold">Certificates</h2>
-                        <p className="mt-3 text-sm leading-6 text-zinc-400">
-                            Selected professional development and credentials.
-                        </p>
-                    </div>
+                <CollapsibleSection
+                    title="Certificates"
+                    summaryDescription="Selected professional development and credentials."
+                    className="py-12 lg:py-16"
+                    summaryClassName="py-0 lg:grid lg:grid-cols-[14rem_1fr] lg:gap-16"
+                    titleClassName="text-2xl font-semibold"
+                    contentClassName="pt-6 lg:pl-[calc(14rem+4rem)]"
+                >
                     <ul className="divide-y divide-zinc-800">
                         {certifications.map((item) => (
                             <li key={item.name} className="flex flex-col justify-between gap-3 py-5 first:pt-0 sm:flex-row sm:items-center">
@@ -526,12 +546,15 @@ export default function AboutPage() {
                             </li>
                         ))}
                     </ul>
-                </section>
+                </CollapsibleSection>
 
-                <section className="mb-16 flex flex-col justify-between gap-6 border-t border-zinc-800 pt-8 md:flex-row md:items-center">
-                    <p className="text-lg text-zinc-300">
-                        Interested in working together?
-                    </p>
+                <CollapsibleSection
+                    title="Interested in working together?"
+                    className="mb-16 border-t border-zinc-800 pt-8"
+                    summaryClassName="py-0"
+                    titleClassName="text-lg font-medium text-zinc-300"
+                    contentClassName="pt-5"
+                >
                     <Link
                         href="mailto:desmondknunoo@gmail.com"
                         className="inline-flex items-center gap-2 text-sm font-medium text-white underline decoration-zinc-600 underline-offset-4 hover:decoration-white"
@@ -539,7 +562,7 @@ export default function AboutPage() {
                         Let&apos;s talk
                         <ArrowUpRight className="h-4 w-4" />
                     </Link>
-                </section>
+                </CollapsibleSection>
             </div>
             <Footer />
         </main>

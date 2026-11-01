@@ -1,12 +1,14 @@
+import { googleVisitPhotos, galaxyPhotos, workshopPhotos, labVisitPhotos, bootcampVisitPhotos, etcVisitPhotos } from '@/lib/story-images';
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Footer } from "@/components/footer";
+import { CollapsibleSection } from "@/components/collapsible-section";
 import { LightboxGallery } from "@/components/lightbox-gallery";
 import { SiteNav } from "@/components/site-nav";
 
 export const metadata: Metadata = {
-    title: "Social Media | Desmond Kwame Nunoo",
+    title: "Posts | Desmond Kwame Nunoo",
     description:
         "Stories and updates from Desmond Kwame Nunoo's work in technology and STEM education.",
 };
@@ -90,6 +92,13 @@ const eclecticLoveImages = [
     },
 ];
 
+const romanTelescopeImages = [
+    {
+        src: "https://media.licdn.com/dms/image/v2/D4D22AQFV1uihqlS-Mg/feedshare-shrink_800/B4DZ9RurP0HQAc-/0/1783782618328?e=1794441600&v=beta&t=2JQ-Zc0R6eGRfCC5t1nO38ApxDg0LcggrT67WUdpMlM",
+        alt: "Nancy Grace Roman Space Telescope announcement shared on LinkedIn",
+    },
+];
+
 const partners = [
     { label: "Lancaster University Ghana", href: "https://www.linkedin.com/school/lancasterghana/" },
     { label: "KGL Foundation", href: "https://www.linkedin.com/company/kglfoundation/" },
@@ -160,22 +169,81 @@ export default function SocialMediaPage() {
                     About
                 </Link>
 
-                <section className="border-b border-zinc-800 py-12 md:py-16">
-                    <h1 className="max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl">
-                        Social Media
-                    </h1>
+                <CollapsibleSection
+                    title="Posts"
+                    headingLevel="h1"
+                    className="border-b border-zinc-800 py-12 md:py-16"
+                    summaryClassName="py-0"
+                    titleClassName="max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl"
+                    contentClassName="pb-0"
+                >
                     <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-300">
-                        Notes and stories from my work introducing young people
-                        to emerging technologies.
+                        Notes and stories from my work introducing young people to emerging technologies.
                     </p>
-                </section>
+                </CollapsibleSection>
 
-                <article className="grid gap-10 py-10 md:grid-cols-[minmax(0,1fr)_18rem] md:gap-16 md:py-14">
+                {[
+                    { id: 'workshops', title: 'Workshops and presentations', photos: workshopPhotos },
+                    { id: 'lab-visits', title: 'Technology lab visits', photos: labVisitPhotos },
+                    { id: 'bootcamp-visits', title: 'Bootcamp visits', photos: bootcampVisitPhotos },
+                    { id: 'etc-visits', title: 'School visits and demonstrations at the ETC', photos: etcVisitPhotos },
+                ].map((story) => (
+                    <div key={story.id} id={story.id} className="scroll-mt-8">
+                        <CollapsibleSection title={story.title} className="py-10" contentClassName="mt-6 pb-0">
+                            <LightboxGallery images={story.photos} layout="grid" />
+                        </CollapsibleSection>
+                    </div>
+                ))}
+
+                <CollapsibleSection
+                    title="My name is heading to space with the Roman Space Telescope"
+                    summaryDescription="NASA · Space exploration"
+                    className="py-10 md:py-14"
+                    summaryClassName="py-0"
+                    titleClassName="max-w-3xl text-2xl font-semibold leading-tight text-zinc-100 md:text-4xl"
+                    contentClassName="grid gap-8 pt-6 md:grid-cols-[minmax(0,1fr)_18rem] md:gap-16"
+                >
                     <div>
-                        <p className="text-sm text-zinc-400">STEM Education · Accra, Ghana</p>
-                        <h2 className="mt-3 max-w-3xl text-2xl font-semibold leading-tight md:text-4xl">
-                            From emerging technologies bootcamp to the Google Accra AI Community Centre
-                        </h2>
+                        <p className="mt-5 max-w-3xl leading-7 text-zinc-300">
+                            I just added my name to NASA&apos;s Nancy Grace Roman
+                            Space Telescope. A digital copy of my name will be
+                            stored on an SD card attached to the observatory,
+                            launching next month aboard a SpaceX Falcon Heavy
+                            rocket.
+                        </p>
+                        <Link
+                            href="https://lnkd.in/p/ddrJjrb6"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-7 inline-flex min-h-11 items-center gap-2 rounded-full bg-zinc-100 px-5 py-3 text-sm font-medium text-zinc-950 transition-colors hover:bg-white"
+                        >
+                            View the LinkedIn post
+                            <ArrowUpRight className="h-4 w-4" />
+                        </Link>
+                    </div>
+                    <p className="max-w-xs text-sm leading-6 text-zinc-400">
+                        A small piece of my story will travel with a mission
+                        exploring the universe.
+                    </p>
+                    <div className="md:col-span-2">
+                        <LightboxGallery
+                            images={romanTelescopeImages}
+                            postUrl="https://lnkd.in/p/ddrJjrb6"
+                            layout="featured"
+                        />
+                    </div>
+                </CollapsibleSection>
+
+                <CollapsibleSection
+                    id="google-visit"
+                    title="From emerging technologies bootcamp to the Google Accra AI Community Centre"
+                    summaryDescription="STEM Education · Accra, Ghana"
+                    className="py-10 md:py-14"
+                    summaryClassName="py-0"
+                    titleClassName="max-w-3xl text-2xl font-semibold leading-tight text-zinc-100 md:text-4xl"
+                    contentClassName="grid gap-10 pt-6 md:grid-cols-[minmax(0,1fr)_18rem] md:gap-16"
+                >
+                    <div>
                         <p className="mt-5 max-w-3xl leading-7 text-zinc-300">
                             Two months after the Emerging Technologies Bootcamp at
                             Lancaster University Ghana, the cohort and their
@@ -239,16 +307,18 @@ export default function SocialMediaPage() {
                             ))}
                         </ul>
                     </aside>
-                </article>
+                </CollapsibleSection>
 
-                <section className="border-t border-zinc-800 py-10 md:py-12">
-                    <div className="mb-6 flex items-end justify-between gap-6">
-                        <div>
-                            <h3 className="text-xl font-semibold">Photos from the bootcamp and visit</h3>
-                            <p className="mt-2 text-sm text-zinc-400">
-                                Shared with the original LinkedIn post.
-                            </p>
-                        </div>
+                <CollapsibleSection
+                    title="Photos from the bootcamp and visit"
+                    summaryDescription="Shared with the original LinkedIn post."
+                    className="border-t border-zinc-800 py-10 md:py-12"
+                    summaryClassName="py-0"
+                    titleClassName="text-xl font-semibold text-zinc-100"
+                    summaryDescriptionClassName="text-sm"
+                    contentClassName="pt-6 pb-0"
+                >
+                    <div className="mb-6 flex justify-end">
                         <Link
                             href={postUrl}
                             target="_blank"
@@ -259,16 +329,19 @@ export default function SocialMediaPage() {
                             <ArrowUpRight className="h-4 w-4" />
                         </Link>
                     </div>
-                    <LightboxGallery images={images} postUrl={postUrl} />
-                </section>
+                    <LightboxGallery images={[...googleVisitPhotos, ...images]} postUrl={postUrl} />
+                </CollapsibleSection>
 
-                <article className="border-t border-zinc-800 py-10 md:py-14">
+                <CollapsibleSection
+                    title="No hardware? No problem!"
+                    summaryDescription="Engineering · Electronics · Education"
+                    className="border-t border-zinc-800 py-10 md:py-14"
+                    summaryClassName="py-0"
+                    titleClassName="max-w-3xl text-2xl font-semibold leading-tight text-zinc-100 md:text-4xl"
+                    contentClassName="pt-6 pb-0"
+                >
                     <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_18rem] md:gap-16">
                         <div>
-                            <p className="text-sm text-zinc-400">Engineering · Electronics · Education</p>
-                            <h2 className="mt-3 max-w-3xl text-2xl font-semibold leading-tight md:text-4xl">
-                                No hardware? No problem!
-                            </h2>
                             <p className="mt-5 max-w-3xl leading-7 text-zinc-300">
                                 Testing circuits and code no longer needs a desk
                                 cluttered with wires and burned-out components.
@@ -311,8 +384,7 @@ export default function SocialMediaPage() {
                     </div>
                     <div className="mt-10 grid gap-10 border-t border-zinc-800 pt-8 md:grid-cols-2 md:gap-12">
                         {simulatorGroups.map((group) => (
-                            <section key={group.title}>
-                                <h3 className="text-lg font-medium">{group.title}</h3>
+                            <CollapsibleSection key={group.title} title={group.title} titleClassName="text-lg font-medium text-zinc-100">
                                 <ul className="mt-4 divide-y divide-zinc-800">
                                     {group.tools.map((tool) => (
                                         <li key={tool.name} className="py-4 first:pt-0">
@@ -323,18 +395,22 @@ export default function SocialMediaPage() {
                                         </li>
                                     ))}
                                 </ul>
-                            </section>
+                            </CollapsibleSection>
                         ))}
                     </div>
-                </article>
+                </CollapsibleSection>
 
-                <article className="border-t border-zinc-800 py-10 md:py-14">
+                <CollapsibleSection
+                    id="galaxy-fair"
+                    title="Celebrating the next generation of changemakers"
+                    summaryDescription="STEAM · Judging · Youth innovation"
+                    className="border-t border-zinc-800 py-10 md:py-14"
+                    summaryClassName="py-0"
+                    titleClassName="max-w-3xl text-2xl font-semibold leading-tight text-zinc-100 md:text-4xl"
+                    contentClassName="pt-6 pb-0"
+                >
                     <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_18rem] md:gap-16">
                         <div>
-                            <p className="text-sm text-zinc-400">STEAM · Judging · Youth innovation</p>
-                            <h2 className="mt-3 max-w-3xl text-2xl font-semibold leading-tight md:text-4xl">
-                                Celebrating the next generation of changemakers
-                            </h2>
                             <p className="mt-5 max-w-3xl leading-7 text-zinc-300">
                                 I had the pleasure of serving as a judge,
                                 representing Lancaster University Ghana, at the
@@ -387,19 +463,22 @@ export default function SocialMediaPage() {
                     </div>
                     <div className="mt-10 border-t border-zinc-800 pt-8">
                         <LightboxGallery
-                            images={galaxyImages}
+                            images={[...galaxyPhotos, ...galaxyImages]}
                             postUrl="https://www.linkedin.com/feed/update/urn:li:activity:7330606104315314178/"
                         />
                     </div>
-                </article>
+                </CollapsibleSection>
 
-                <article className="border-t border-zinc-800 py-10 md:py-14">
+                <CollapsibleSection
+                    title="Mentoring young innovators at the Teens in AI Hackathon"
+                    summaryDescription="AI · Robotics · Design thinking"
+                    className="border-t border-zinc-800 py-10 md:py-14"
+                    summaryClassName="py-0"
+                    titleClassName="max-w-3xl text-2xl font-semibold leading-tight text-zinc-100 md:text-4xl"
+                    contentClassName="pt-6 pb-0"
+                >
                     <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_18rem] md:gap-16">
                         <div>
-                            <p className="text-sm text-zinc-400">AI · Robotics · Design thinking</p>
-                            <h2 className="mt-3 max-w-3xl text-2xl font-semibold leading-tight md:text-4xl">
-                                Mentoring young innovators at the Teens in AI Hackathon
-                            </h2>
                             <p className="mt-5 max-w-3xl leading-7 text-zinc-300">
                                 As a passionate advocate for AI, robotics, and
                                 STEM education, I had the pleasure of mentoring
@@ -458,7 +537,7 @@ export default function SocialMediaPage() {
                             layout="pair"
                         />
                     </div>
-                </article>
+                </CollapsibleSection>
 
             </div>
             <Footer />

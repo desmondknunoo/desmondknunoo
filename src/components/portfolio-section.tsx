@@ -1,37 +1,7 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ExternalLink } from 'lucide-react'
-
-const projects = [
-    {
-        title: 'SmartSale ERP Website - Redesign',
-        description: 'Integrated technology for managing your business.',
-        tags: 'UI/UX • WEB • PRODUCT',
-        image: '/images/sserpImage.jpg',
-        links: [
-            { label: 'Figma Prototype', url: 'https://www.figma.com/proto/HdGJI0rx0r2xWJodWBqXvC/SmartSale-Website---Redesign' },
-            { label: 'Website', url: 'https://smartsaleerp.com' }
-        ]
-    },
-    {
-        title: 'Kampuze',
-        description: 'Buy and sell music on Kampuze on your smartphone.',
-        tags: 'UI/UX • PRODUCT • MOBILE • iOS',
-        image: '/images/kampuzeImage.jpg',
-        links: [
-            { label: 'Figma Prototype', url: 'https://www.figma.com/proto/oiJYt62X4b2nbWeCQdVVat/Kampuze-Music' }
-        ]
-    },
-    {
-        title: 'U4nor',
-        description: 'Relevant and reliable campus news curated for tertiary students in Ghana.',
-        tags: 'UI/UX • PRODUCT • MOBILE • ANDROID',
-        image: '/images/u4norImage.jpg',
-        links: [
-            { label: 'Behance', url: 'https://www.behance.net/gallery/91548529/U4nor-Android-App-UIUX' },
-            { label: 'Google Play Store', url: 'https://play.google.com/store/apps/details?id=com.u4nor.android' }
-        ]
-    }
-]
+import { portfolioProjects } from '@/lib/projects'
 
 export function PortfolioSection() {
     return (
@@ -47,15 +17,17 @@ export function PortfolioSection() {
                 <hr className="border-zinc-800 mb-8" />
 
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {projects.map((project, index) => (
+                        {portfolioProjects.map((project) => (
                         <div
-                            key={index}
+                            key={project.title}
                             className="group overflow-hidden rounded-3xl bg-zinc-900 transition-transform hover:scale-[1.02]"
                         >
                             <div className="aspect-video overflow-hidden">
-                                <img
+                                <Image
                                     src={project.image}
                                     alt={project.title}
+                                    width={1200}
+                                    height={675}
                                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                                 />
                             </div>
@@ -87,7 +59,7 @@ export function PortfolioSection() {
 
                 <p className="mt-6 text-xl font-light text-zinc-400">
                     View more work{' '}
-                    <Link href="/work" className="font-medium text-zinc-200 hover:underline">
+                    <Link href="/projects" className="font-medium text-zinc-200 hover:underline">
                         here
                     </Link>
                     .
