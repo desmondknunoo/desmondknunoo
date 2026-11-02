@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 const links = [
     { href: "/about", label: "About" },
@@ -12,16 +13,45 @@ const links = [
 
 export function SiteNav() {
     return (
-        <nav aria-label="Main navigation" className="flex flex-wrap items-center justify-end gap-x-1 text-xs text-zinc-400 sm:gap-x-4 sm:text-sm">
-            {links.map((link) => (
-                <Link
-                    key={link.href}
-                    href={link.href}
-                    className="inline-flex min-h-11 items-center px-2 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300"
+        <>
+            <nav
+                aria-label="Main navigation"
+                className="hidden items-center gap-x-4 text-sm text-zinc-400 md:flex"
+            >
+                {links.map((link) => (
+                    <Link
+                        key={link.href}
+                        href={link.href}
+                        className="inline-flex min-h-11 items-center px-2 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300"
+                    >
+                        {link.label}
+                    </Link>
+                ))}
+            </nav>
+
+            <details className="group relative md:hidden">
+                <summary
+                    aria-label="Menu"
+                    className="flex min-h-11 min-w-11 cursor-pointer list-none items-center justify-center text-zinc-300 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300 [&::-webkit-details-marker]:hidden"
                 >
-                    {link.label}
-                </Link>
-            ))}
-        </nav>
+                    <Menu aria-hidden="true" className="h-6 w-6 group-open:hidden" />
+                    <X aria-hidden="true" className="hidden h-6 w-6 group-open:block" />
+                </summary>
+                <nav
+                    aria-label="Mobile navigation"
+                    className="absolute right-0 top-full z-30 mt-2 w-56 border border-zinc-800 bg-zinc-950 py-2 shadow-xl"
+                >
+                    {links.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className="flex min-h-11 items-center px-4 text-base text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-zinc-300"
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
+                </nav>
+            </details>
+        </>
     );
 }
