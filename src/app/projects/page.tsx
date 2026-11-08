@@ -19,6 +19,7 @@ const designWorkSlugs = [
     'mtn-stands-in-worship',
     'mtn-afcon',
     'mtn-outdoor-activations',
+    'sanlam-launch',
     'closeup-covid-19-campaign',
     'visit-ghana-mini-map',
     'gnpc-chocolate-packaging',
