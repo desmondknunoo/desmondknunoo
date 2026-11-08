@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { CollapsibleSection } from "@/components/collapsible-section";
 import { LightboxGallery } from "@/components/lightbox-gallery";
-import { SiteNav } from "@/components/site-nav";
+import { PortfolioHeader } from "@/components/portfolio-header";
 
 export const metadata: Metadata = {
     title: "Posts | Desmond Kwame Nunoo",
@@ -153,13 +153,8 @@ const simulatorGroups = [
 export default function SocialMediaPage() {
     return (
         <main className="min-h-screen bg-zinc-950 text-zinc-100">
-            <div className="mx-auto max-w-7xl px-6 pt-8 md:px-12 md:pt-10">
-                <header className="flex items-center justify-between gap-5">
-                    <Link href="/" className="text-sm font-semibold tracking-wide text-zinc-200">
-                        DKN
-                    </Link>
-                    <SiteNav />
-                </header>
+            <PortfolioHeader />
+            <div className="mx-auto max-w-7xl px-6 md:px-12">
 
                 <Link
                     href="/about"
@@ -189,15 +184,15 @@ export default function SocialMediaPage() {
                     { id: 'etc-visits', title: 'School visits and demonstrations at the ETC', photos: etcVisitPhotos },
                 ].map((story) => (
                     <div key={story.id} id={story.id} className="scroll-mt-8">
-                        <CollapsibleSection title={story.title} className="py-10" contentClassName="mt-6 pb-0">
-                            <LightboxGallery images={story.photos} layout="grid" />
+                        <CollapsibleSection title={story.title} summaryDescription="Dates unavailable" className="py-10" contentClassName="mt-6 pb-0">
+                            <LightboxGallery images={story.photos} />
                         </CollapsibleSection>
                     </div>
                 ))}
 
                 <CollapsibleSection
                     title="My name is heading to space with the Roman Space Telescope"
-                    summaryDescription="NASA · Space exploration"
+                    summaryDescription="NASA · Space exploration · Jul 2026"
                     className="py-10 md:py-14"
                     summaryClassName="py-0"
                     titleClassName="max-w-3xl text-2xl font-semibold leading-tight text-zinc-100 md:text-4xl"
@@ -229,7 +224,6 @@ export default function SocialMediaPage() {
                         <LightboxGallery
                             images={romanTelescopeImages}
                             postUrl="https://lnkd.in/p/ddrJjrb6"
-                            layout="featured"
                         />
                     </div>
                 </CollapsibleSection>
@@ -237,7 +231,7 @@ export default function SocialMediaPage() {
                 <CollapsibleSection
                     id="google-visit"
                     title="From emerging technologies bootcamp to the Google Accra AI Community Centre"
-                    summaryDescription="STEM Education · Accra, Ghana"
+                    summaryDescription="STEM Education · Accra, Ghana · Posted 17 Mar 2026"
                     className="py-10 md:py-14"
                     summaryClassName="py-0"
                     titleClassName="max-w-3xl text-2xl font-semibold leading-tight text-zinc-100 md:text-4xl"
@@ -311,7 +305,7 @@ export default function SocialMediaPage() {
 
                 <CollapsibleSection
                     title="Photos from the bootcamp and visit"
-                    summaryDescription="Shared with the original LinkedIn post."
+                    summaryDescription="Shared on LinkedIn · 17 Mar 2026"
                     className="border-t border-zinc-800 py-10 md:py-12"
                     summaryClassName="py-0"
                     titleClassName="text-xl font-semibold text-zinc-100"
@@ -334,7 +328,7 @@ export default function SocialMediaPage() {
 
                 <CollapsibleSection
                     title="No hardware? No problem!"
-                    summaryDescription="Engineering · Electronics · Education"
+                    summaryDescription="Engineering · Electronics · Education · Posted 10 Jun 2026"
                     className="border-t border-zinc-800 py-10 md:py-14"
                     summaryClassName="py-0"
                     titleClassName="max-w-3xl text-2xl font-semibold leading-tight text-zinc-100 md:text-4xl"
@@ -379,7 +373,6 @@ export default function SocialMediaPage() {
                                 },
                             ]}
                             postUrl="https://www.linkedin.com/feed/update/urn:li:activity:7470387419230527488/"
-                            layout="featured"
                         />
                     </div>
                     <div className="mt-10 grid gap-10 border-t border-zinc-800 pt-8 md:grid-cols-2 md:gap-12">
@@ -403,7 +396,7 @@ export default function SocialMediaPage() {
                 <CollapsibleSection
                     id="galaxy-fair"
                     title="Celebrating the next generation of changemakers"
-                    summaryDescription="STEAM · Judging · Youth innovation"
+                    summaryDescription="STEAM · Judging · Youth innovation · Posted 20 May 2025"
                     className="border-t border-zinc-800 py-10 md:py-14"
                     summaryClassName="py-0"
                     titleClassName="max-w-3xl text-2xl font-semibold leading-tight text-zinc-100 md:text-4xl"
@@ -471,7 +464,7 @@ export default function SocialMediaPage() {
 
                 <CollapsibleSection
                     title="Mentoring young innovators at the Teens in AI Hackathon"
-                    summaryDescription="AI · Robotics · Design thinking"
+                    summaryDescription="AI · Robotics · Design thinking · Posted 22 Nov 2024"
                     className="border-t border-zinc-800 py-10 md:py-14"
                     summaryClassName="py-0"
                     titleClassName="max-w-3xl text-2xl font-semibold leading-tight text-zinc-100 md:text-4xl"
@@ -534,11 +527,46 @@ export default function SocialMediaPage() {
                         <LightboxGallery
                             images={eclecticLoveImages}
                             postUrl="https://www.linkedin.com/feed/update/urn:li:activity:7265714415256104960/"
-                            layout="pair"
                         />
                     </div>
                 </CollapsibleSection>
 
+                <CollapsibleSection
+                    title="Batch Logo Animation"
+                    summaryDescription="Motion graphics · 9 June 2022"
+                    className="border-t border-zinc-800 py-10 md:py-14"
+                    contentClassName="pt-6"
+                >
+                    <p className="max-w-2xl text-zinc-300">
+                        Tried something for the #batchlogochallenge @BatchMotion @rowlandolamide @jobosonchisa
+                    </p>
+                    <iframe
+                        title="Batch Logo Animation video and original post on X"
+                        src="https://platform.twitter.com/embed/Tweet.html?id=1534801453981782016&theme=dark&dnt=true"
+                        loading="lazy"
+                        allow="fullscreen"
+                        className="mt-5 h-[600px] w-full max-w-[550px] rounded-xl border border-zinc-800"
+                    />
+                    <Link
+                        href="https://x.com/desmondknunoo/status/1534801453981782016"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-flex min-h-11 items-center gap-2 text-sm text-zinc-100 underline underline-offset-4"
+                    >
+                        View original post on X <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+                    </Link>
+                </CollapsibleSection>
+
+                <div data-scroll-reveal className="border-t border-zinc-800 py-8">
+                    <Link
+                        href="https://linktr.ee/desmondknunoo"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-zinc-100 underline underline-offset-4"
+                    >
+                        Find me on Linktree <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+                    </Link>
+                </div>
             </div>
             <Footer />
         </main>

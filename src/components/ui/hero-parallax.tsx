@@ -9,7 +9,6 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { SiteNav } from "@/components/site-nav";
 
 export const HeroParallax = ({
     products,
@@ -19,6 +18,7 @@ export const HeroParallax = ({
         link: string;
         thumbnail: string;
         position?: string;
+        date: string | null;
     }[];
 }) => {
     const firstRow = products.slice(0, 5);
@@ -59,7 +59,7 @@ export const HeroParallax = ({
     return (
         <div
             ref={ref}
-            className="h-[150vh] overflow-hidden py-20 antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] md:h-[300vh] md:py-40"
+            className="h-[150vh] overflow-hidden pb-20 pt-8 antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] md:h-[300vh] md:pb-40 md:pt-16"
         >
             <Header />
             <motion.div
@@ -106,12 +106,6 @@ export const HeroParallax = ({
 export const Header = () => {
     return (
         <div className="max-w-7xl relative z-20 mx-auto px-6 pt-8 md:px-12 md:pt-10 w-full left-0 top-0">
-            <div className="mb-20 flex items-center justify-between gap-5 md:mb-32">
-                <Link href="/" className="text-sm font-semibold tracking-wide text-zinc-200">
-                    DKN
-                </Link>
-                <SiteNav />
-            </div>
             <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
                 Desmond Kwame Nunoo
             </h1>
@@ -131,6 +125,7 @@ export const ProductCard = ({
         link: string;
         thumbnail: string;
         position?: string;
+        date: string | null;
     };
     translate: MotionValue<number>;
 }) => {
@@ -161,6 +156,7 @@ export const ProductCard = ({
             <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
             <h2 className="absolute bottom-4 left-4 opacity-100 md:opacity-0 group-hover/product:opacity-100 group-focus-within/product:opacity-100 text-white bg-black/70 px-3 py-2">
                 {product.title}
+                <span className="block text-sm text-zinc-300">{product.date ?? "Date unavailable"}</span>
             </h2>
         </motion.div>
     );

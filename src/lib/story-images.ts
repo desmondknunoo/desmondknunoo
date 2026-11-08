@@ -69,38 +69,41 @@ export const etcOpeningPhotos: StoryImage[] = [
     }
 ]
 
-export const designThinkingPhotos: StoryImage[] = [
-    {
-        "src": "/images/stories/pictures-1.webp",
-        "alt": "Eclectic Love — Design Thinking",
-        "fit": "contain"
-    },
-    {
-        "src": "/images/stories/techspark-facilitator.webp",
-        "alt": "Desmond Kwame Nunoo — facilitator",
-        "fit": "contain"
-    },
-    {
-        "src": "/images/stories/five_whys.webp",
-        "alt": "five whys",
-        "fit": "contain"
-    },
-    {
-        "src": "/images/stories/people_map.webp",
-        "alt": "people map",
-        "fit": "contain"
-    },
-    {
-        "src": "/images/stories/problem_pitch.webp",
-        "alt": "problem pitch",
-        "fit": "contain"
-    },
-    {
-        "src": "/images/stories/problem_safari.webp",
-        "alt": "problem safari",
-        "fit": "contain"
+export const designThinkingSlides: StoryImage[] = [
+    "Design Thinking: People Before Solutions",
+    "Using artificial intelligence to solve real problems in Ghana",
+    "People Before Solutions",
+    "Meet the facilitator, Desmond Kwame Nunoo",
+    "Discovery",
+    "Your mission: identify a problem worth solving",
+    "Look beyond the solution you want to build",
+    "Session objectives",
+    "Identify the person or community affected",
+    "Frame the problem clearly",
+    "Question what you still need to learn",
+    "The solution trap",
+    "What is design thinking?",
+    "Design thinking introduction",
+    "Focus on the people affected by the problem",
+    "Avoid guessing what someone wants",
+    "Talk, brainstorm, test, and improve",
+    "The solution trap introduction",
+    "A solution looking for a problem",
+    "Your Discover handoff",
+    "Activity: Who is experiencing the problem?",
+    "Activity: Problem or solution?",
+    "From solution-first to people-first",
+    "Activity: Good problems create good questions",
+    "Innovation Lab readiness checklist",
+    "Activity: Problem Safari",
+].map((title, index) => {
+    const number = index + 1
+    return {
+        src: `/images/stories/techspark-slides/slide-${String(number).padStart(2, '0')}.webp`,
+        alt: `Slide ${number}: ${title}`,
+        fit: 'contain',
     }
-]
+})
 
 export const googleVisitPhotos: StoryImage[] = [
     {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, Mail } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { CollapsibleSection } from "@/components/collapsible-section";
-import { SiteNav } from "@/components/site-nav";
+import { PortfolioHeader } from "@/components/portfolio-header";
 
 export const metadata: Metadata = {
     title: "About | Desmond Kwame Nunoo",
@@ -243,7 +243,8 @@ const experience = [
 const education = [
     {
         school: "Kwame Nkrumah University of Science and Technology, Kumasi",
-        qualification: "Bachelor's degree · First class honors",
+        qualification: "BA in Publishing Studies · First class honors",
+        year: "2019",
         details:
             "Final-year project: The Orange Offline Publishing Dictionary, a native Kotlin Android application with a database of more than 5,000 terms.",
     },
@@ -251,6 +252,7 @@ const education = [
         school: "Pope John Senior High School and Minor Seminary",
         qualification:
             "WASSCE, General Science (Biology, Physics, Chemistry and Elective Mathematics)",
+        year: "2013",
         details: "Biology, Physics, Chemistry, and Elective Mathematics.",
     },
 ];
@@ -289,10 +291,10 @@ const expertise = [
 
 const achievements = [
     "Coached a student team to first place in the Stars League at the 2024 Ghana Robotics Competition with a Raspberry Pi Pico-powered HoleyBot.",
-    "Contributed to Antrak Express’s delivery management software suite and developed InnoCode for programming local microcontrollers.",
-    "Built Abakosem Puzzle, a Ghana history puzzle game in Flutter with a React and Supabase admin platform.",
-    "Developed and contributed to software through Achendo, including Fluid, Squeeze, and Keyring.",
-    "Contributed to InnoKit, a robotics learning kit.",
+    "Contributed to Antrak Express’s delivery management software suite and developed InnoCode for programming local microcontrollers (2026).",
+    "Built Abakosem Puzzle, a Ghana history puzzle game in Flutter with a React and Supabase admin platform (2026 rebuild).",
+    "Developed and contributed to software through Achendo, including Squeeze and Keyring (2026).",
+    "Contributed to InnoKit, a robotics learning kit (2025).",
 ];
 
 const collaborators =
@@ -345,13 +347,8 @@ const certifications = [
 export default function AboutPage() {
     return (
         <main className="min-h-screen bg-zinc-950 text-zinc-100">
-            <div className="mx-auto max-w-7xl px-6 pt-8 md:px-12 md:pt-10">
-                <header className="flex items-center justify-between gap-5">
-                    <Link href="/" className="text-sm font-semibold tracking-wide text-zinc-200">
-                        DKN
-                    </Link>
-                    <SiteNav />
-                </header>
+            <PortfolioHeader />
+            <div className="mx-auto max-w-7xl px-6 md:px-12">
                 <Link
                     href="/"
                     className="mt-16 inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white"
@@ -477,7 +474,7 @@ export default function AboutPage() {
                                 key={item.school}
                                 title={item.school}
                                 headingLevel="h3"
-                                summaryDescription={item.qualification}
+                                summaryDescription={`${item.qualification} · ${item.year}`}
                                 summaryDescriptionClassName="!mt-1 text-zinc-300"
                                 initiallyOpen={false}
                                 className="py-5"

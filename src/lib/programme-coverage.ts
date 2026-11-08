@@ -36,7 +36,7 @@ export const coveredTrainings: CoveredTraining[] = [
     {
         id: 'emerging-technologies-bootcamp-kgl',
         images: kglPhotos,
-        title: 'Emerging Technologies Bootcamp — KGL Foundation',
+        title: 'Emerging Technologies Bootcamp — KGL Foundation (2026)',
         organization: 'Lancaster University Ghana · Supported by KGL Foundation',
         details:
             'I taught students in the eight-week Emerging Technologies Bootcamp supported by KGL Foundation. I introduced high school students to machine learning, microcontroller programming, 3D modelling for printing, and agentic coding. The programme brought together more than 30 students from 10 schools for hands-on learning in AI, robotics, coding, microcontrollers, smart systems, and 3D printing.',
@@ -91,7 +91,7 @@ export const coveredTrainings: CoveredTraining[] = [
 ]
 
 export const etcOpeningCoverage = {
-    title: 'Emerging Technologies Centre opening and guided tour',
+    title: 'Emerging Technologies Centre opening and guided tour (2025)',
     details:
         'At the opening of Lancaster University Ghana’s Emerging Technologies Centre, I took visitors on a tour of the new facility with Dr. Pius Gadosey. The university’s article covers the unveiling, the guided tour, and the centre’s robotics, VR, IoT, and other emerging technology facilities.',
     coverage: {

@@ -29,7 +29,7 @@ export default function FeaturedPage() {
                     contentClassName="mt-4 pb-0"
                 >
                     <p className="max-w-3xl leading-7 text-zinc-300">{training.details}</p>
-                    <div className="mt-6"><LightboxGallery images={training.images} postUrl={training.coverage[0].href} sourceLabel="Read programme coverage" layout="grid" /></div>
+                    <div className="mt-6"><LightboxGallery images={training.images} postUrl={training.coverage[0].href} sourceLabel="Read programme coverage" /></div>
                     <ProgrammeCoverageLinks articles={training.coverage} />
                     <div className="mt-4">
                         <Link
@@ -49,7 +49,7 @@ export default function FeaturedPage() {
                 contentClassName="mt-4 pb-0"
             >
                 <p className="max-w-3xl leading-7 text-zinc-300">{etcOpeningCoverage.details}</p>
-                <div className="mt-6"><LightboxGallery images={etcOpeningPhotos} postUrl={etcOpeningCoverage.coverage.href} sourceLabel="Read the unveiling article" layout="grid" /></div>
+                <div className="mt-6"><LightboxGallery images={etcOpeningPhotos} postUrl={etcOpeningCoverage.coverage.href} sourceLabel="Read the unveiling article" /></div>
                 <Link
                     href={etcOpeningCoverage.coverage.href}
                     target="_blank"
@@ -60,12 +60,12 @@ export default function FeaturedPage() {
                 </Link>
             </CollapsibleSection>
             </div>
-            <CollapsibleSection id="robotics-competitions" title="Robotics competitions and recognition" className="py-8" contentClassName="mt-6 pb-0">
-                <LightboxGallery images={roboticsRecognitionPhotos} layout="grid" />
+            <CollapsibleSection id="robotics-competitions" title="Robotics competitions and recognition" summaryDescription="2024–2025 highlights" className="py-8" contentClassName="mt-6 pb-0">
+                <LightboxGallery images={roboticsRecognitionPhotos} />
             </CollapsibleSection>
             <CollapsibleSection id="galaxy-science-fair" title="Science & Makers’ Fair — Galaxy International School (2025)" className="py-8" contentClassName="mt-4 pb-0">
                 <p className="mb-6 max-w-3xl leading-7 text-zinc-300">I represented Lancaster University Ghana as a judge at Galaxy International School’s Science &amp; Makers’ Fair and STEAM Competition 2025.</p>
-                <LightboxGallery images={galaxyPhotos} postUrl="https://www.linkedin.com/feed/update/urn:li:activity:7330606104315314178/" layout="grid" />
+                <LightboxGallery images={galaxyPhotos} postUrl="https://www.linkedin.com/feed/update/urn:li:activity:7330606104315314178/" />
             </CollapsibleSection>
             <CollapsibleSection title="Press and interviews" className="py-8">
                 <p className="mt-3 max-w-2xl leading-7 text-zinc-400">

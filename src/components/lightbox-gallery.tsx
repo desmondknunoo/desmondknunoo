@@ -14,17 +14,48 @@ type LightboxGalleryProps = {
     images: GalleryImage[];
     postUrl?: string;
     sourceLabel?: string;
-    layout?: "bento" | "pair" | "featured" | "grid";
 };
 
 export function LightboxGallery({
     images,
     postUrl,
     sourceLabel = "View original post",
-    layout = "bento",
 }: LightboxGalleryProps) {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
     const dialogRef = useRef<HTMLDialogElement>(null);
+    const rowRef = useRef<HTMLDivElement>(null);
+    const [canScroll, setCanScroll] = useState({ left: false, right: false });
+
+    useEffect(() => {
+        const row = rowRef.current;
+        if (!row) return;
+
+        function updateControls() {
+            if (!row) return;
+            setCanScroll({
+                left: row.scrollLeft > 1,
+                right: row.scrollLeft + row.clientWidth < row.scrollWidth - 1,
+            });
+        }
+
+        const observer = new ResizeObserver(updateControls);
+        observer.observe(row);
+        row.addEventListener("scroll", updateControls, { passive: true });
+        return () => {
+            observer.disconnect();
+            row.removeEventListener("scroll", updateControls);
+        };
+    }, [images.length]);
+
+    function scrollRow(direction: -1 | 1) {
+        const row = rowRef.current;
+        const firstTile = row?.firstElementChild;
+        if (!row || !firstTile) return;
+
+        const gap = parseFloat(getComputedStyle(row).columnGap);
+        const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth";
+        row.scrollBy({ left: direction * (firstTile.clientWidth + gap), behavior });
+    }
 
     useEffect(() => {
         const dialog = dialogRef.current;
@@ -47,58 +78,57 @@ export function LightboxGallery({
         });
     };
 
-    const gridClass =
-        layout === "grid"
-            ? `grid grid-cols-1 gap-4 sm:grid-cols-2 ${images.length > 2 ? "lg:grid-cols-3" : ""}`
-            : layout === "featured"
-            ? "grid grid-cols-1"
-            : layout === "pair"
-              ? "grid grid-cols-2 gap-3 sm:gap-4"
-              : "grid auto-rows-[7rem] grid-cols-2 gap-3 sm:auto-rows-[9rem] sm:gap-4 lg:auto-rows-[12rem] lg:grid-cols-4";
-
     return (
         <>
-            <div className={gridClass}>
-                {images.map((image, index) => {
-                    const tileClass =
-                        layout === "grid"
-                            ? "aspect-[4/3]"
-                            : layout === "featured"
-                            ? "aspect-[4/3] sm:aspect-[16/9]"
-                            : layout === "pair"
-                              ? "aspect-square sm:aspect-[4/3]"
-                              : index === 0
-                                ? "col-span-2 row-span-2 h-full min-h-0"
-                                : index === 5
-                                  ? "col-span-2 h-full min-h-0"
-                                  : "h-full min-h-0";
-
-                    return (
+            {(canScroll.left || canScroll.right) && (
+                <div className="mb-2 flex items-center justify-between gap-3">
+                    <p className="text-sm text-zinc-400">{images.length} images · Scroll to browse</p>
+                    <div className="flex gap-2">
                         <button
-                            key={image.src}
                             type="button"
-                            onClick={() => setActiveIndex(index)}
-                            aria-label={`Open image ${index + 1} of ${images.length}: ${image.alt}`}
-                            className={`group relative block w-full cursor-zoom-in overflow-hidden bg-zinc-900 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300 ${tileClass}`}
+                            aria-label="Scroll gallery left"
+                            aria-disabled={!canScroll.left}
+                            onClick={() => canScroll.left && scrollRow(-1)}
+                            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-zinc-700 text-zinc-100 hover:bg-zinc-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300 aria-disabled:opacity-40"
                         >
-                            <Image
-                                src={image.src}
-                                alt={image.alt}
-                                fill
-                                quality={75}
-                                sizes={
-                                    layout === "grid"
-                                        ? `(max-width: 640px) 100vw, (max-width: 1024px) 50vw, ${images.length > 2 ? "33vw" : "50vw"}`
-                                        : layout === "featured"
-                                        ? "(max-width: 896px) 100vw, 896px"
-                                        : "(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
-                                }
-                                className={`${image.fit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-500 motion-reduce:transition-none group-hover:scale-[1.03] motion-reduce:group-hover:scale-100`}
-                            />
-                            <span className="sr-only">Open in lightbox</span>
+                            <ArrowLeft aria-hidden="true" className="h-5 w-5" />
                         </button>
-                    );
-                })}
+                        <button
+                            type="button"
+                            aria-label="Scroll gallery right"
+                            aria-disabled={!canScroll.right}
+                            onClick={() => canScroll.right && scrollRow(1)}
+                            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-zinc-700 text-zinc-100 hover:bg-zinc-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300 aria-disabled:opacity-40"
+                        >
+                            <ArrowRight aria-hidden="true" className="h-5 w-5" />
+                        </button>
+                    </div>
+                </div>
+            )}
+            <div
+                ref={rowRef}
+                role="group"
+                aria-label="Image gallery"
+                className="flex w-full min-w-0 snap-x snap-proximity gap-4 overflow-x-auto overscroll-x-contain p-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+                {images.map((image, index) => (
+                    <button
+                        key={image.src}
+                        type="button"
+                        onClick={() => setActiveIndex(index)}
+                        aria-label={`Open image ${index + 1} of ${images.length}: ${image.alt}`}
+                        className={`group relative aspect-video max-w-4xl shrink-0 snap-start cursor-zoom-in overflow-hidden bg-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300 ${images.length === 1 ? "w-full" : "w-[90%] sm:w-[76%] lg:w-[68%]"}`}
+                    >
+                        <Image
+                            src={image.src}
+                            alt={image.alt}
+                            fill
+                            quality={75}
+                            sizes={images.length === 1 ? "(max-width: 896px) 100vw, 896px" : "(max-width: 639px) 90vw, (max-width: 1023px) 76vw, (max-width: 1318px) 68vw, 896px"}
+                            className={`${image.fit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-500 motion-reduce:transition-none group-hover:scale-[1.03] motion-reduce:group-hover:scale-100`}
+                        />
+                    </button>
+                ))}
             </div>
 
             <dialog

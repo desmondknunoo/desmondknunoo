@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
-const links = [
+export const portfolioNavLinks = [
     { href: "/about", label: "About" },
     { href: "/social-media", label: "Posts" },
     { href: "/publications", label: "Publications" },
@@ -11,12 +11,14 @@ const links = [
     { href: "/contact", label: "Contact" },
 ];
 
+const links = [...portfolioNavLinks, { href: "/search", label: "Search" }];
+
 export function SiteNav() {
     return (
         <>
             <nav
                 aria-label="Main navigation"
-                className="hidden items-center gap-x-4 text-sm text-zinc-400 md:flex"
+                className="hidden items-center gap-x-1 text-sm lg:gap-x-4 text-zinc-400 md:flex"
             >
                 {links.map((link) => (
                     <Link

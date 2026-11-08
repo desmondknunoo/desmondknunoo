@@ -5,19 +5,27 @@ import { ExternalLink } from 'lucide-react'
 import { CollapsibleSection } from '@/components/collapsible-section'
 import { SectionPage } from '@/components/section-page'
 import { portfolioProjects, type PortfolioProject } from '@/lib/projects'
+import { getWorkItem, type WorkItem } from '@/lib/work'
 
 export const metadata: Metadata = {
     title: 'Projects | Desmond Kwame Nunoo',
     description: 'Selected projects and collaborations by Desmond Kwame Nunoo.',
 }
 
-const additionalProjects = [
-    {
-        title: 'HoleyBot',
-        details:
-            'Coached a student team to first place in the Stars League at the 2024 Ghana Robotics Competition. The team built the robot with a Raspberry Pi Pico.',
-    },
+const designWorkSlugs = [
+    'mtn-stands-in-worship',
+    'mtn-afcon',
+    'mtn-outdoor-activations',
+    'closeup-covid-19-campaign',
+    'visit-ghana-mini-map',
+    'gnpc-chocolate-packaging',
+    'lordship-certificate',
+    'joos-bon-appetit',
 ]
+
+const designWork = designWorkSlugs
+    .map((slug) => getWorkItem(slug))
+    .filter((item): item is WorkItem => Boolean(item))
 
 export default function ProjectsPage() {
     return (
@@ -27,19 +35,8 @@ export default function ProjectsPage() {
         >
             <div>
                 {portfolioProjects.map((project) => <div key={project.title} id={project.id} className="scroll-mt-8"><ProjectEntry project={project} /></div>)}
-
             </div>
-
-            <CollapsibleSection title="Additional work" className="pt-10" summaryClassName="py-0" contentClassName="mt-4 pb-0">
-                <ul className="mt-4 divide-y divide-zinc-800">
-                    {additionalProjects.map((project) => (
-                        <li key={project.title} id={project.title === 'HoleyBot' ? 'holeybot' : undefined} className="grid gap-2 py-5 md:grid-cols-[16rem_minmax(0,1fr)] md:gap-12">
-                            <h3 className="font-medium text-zinc-100">{project.title}</h3>
-                            <p className="max-w-3xl leading-7 text-zinc-300">{project.details}</p>
-                        </li>
-                    ))}
-                </ul>
-            </CollapsibleSection>
+            <DesignWork />
         </SectionPage>
     )
 }
@@ -65,7 +62,7 @@ function ProjectEntry({ project }: { project: PortfolioProject }) {
                         </div>
                         <div>
                             <p className="text-sm text-zinc-400">{project.tags}</p>
-                            {project.role && <p className="mt-3 text-sm font-medium text-zinc-200">{project.role}</p>}
+                            <p className="mt-3 text-sm font-medium text-zinc-200">{[project.role, project.date ?? "Date unavailable"].filter(Boolean).join(" · ")}</p>
                             <p className="mt-3 leading-7 text-zinc-300">{project.description}</p>
                             <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3">
                                 {project.links.map((item) => (
@@ -83,5 +80,46 @@ function ProjectEntry({ project }: { project: PortfolioProject }) {
                         </div>
                     </CollapsibleSection>
 
+    )
+}
+
+function DesignWork() {
+    return (
+        <CollapsibleSection
+            id="design-work"
+            title="Design Work"
+            className="py-12"
+            summaryClassName="py-0"
+            titleClassName="text-3xl font-semibold tracking-tight text-zinc-100"
+            summaryDescription="3D event design, print, packaging, and presentation work."
+            contentClassName="mt-8 pb-0"
+        >
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-6 lg:grid-cols-4">
+                {designWork.map((item) => (
+                    <li key={item.slug}>
+                        <Link
+                            href={`/work/${item.slug}`}
+                            className="group/tile block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300 focus-visible:ring-offset-4 focus-visible:ring-offset-zinc-950"
+                        >
+                            <div className="relative aspect-video overflow-hidden bg-zinc-900">
+                                <Image
+                                    src={item.thumbnail}
+                                    alt=""
+                                    fill
+                                    sizes="(max-width: 1024px) 50vw, 22vw"
+                                    className="object-cover transition-opacity duration-300 group-hover/tile:opacity-80"
+                                />
+                            </div>
+                            <h3 className="mt-3 text-base font-semibold leading-snug text-zinc-100 underline decoration-transparent underline-offset-4 transition-colors group-hover/tile:decoration-zinc-400">
+                                {item.title}
+                            </h3>
+                            <p className="mt-1 text-sm leading-6 text-zinc-400">
+                                {[item.category, item.date].filter(Boolean).join(' · ')}
+                            </p>
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </CollapsibleSection>
     )
 }
