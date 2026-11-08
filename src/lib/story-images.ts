@@ -76,13 +76,13 @@ export const designThinkingPhotos: StoryImage[] = [
         "fit": "contain"
     },
     {
-        "src": "/images/stories/five_whys.webp",
-        "alt": "five whys",
+        "src": "/images/stories/techspark-facilitator.webp",
+        "alt": "Desmond Kwame Nunoo — facilitator",
         "fit": "contain"
     },
     {
-        "src": "/images/stories/people_before_solutions.webp",
-        "alt": "people before solutions",
+        "src": "/images/stories/five_whys.webp",
+        "alt": "five whys",
         "fit": "contain"
     },
     {
