@@ -60,7 +60,28 @@ export const portfolioProjects: PortfolioProject[] = [
         "description": "A Flutter app for Android and iOS that controls Arduino, ESP32 and Raspberry Pi Pico projects over Bluetooth: switches, an RGB colour wheel, a gamepad, a car controller, a keypad, a terminal, voice commands and the phone's sensors. It is built for students who program their boards with block code.",
         "tags": "Mobile • Robotics • Education",
         "image": "/images/projects/innocontrol-mockup.webp",
-        "links": []
+        "links": [
+            {
+                "label": "Download",
+                "url": "https://stembotiks.com/innocontrol"
+            }
+        ]
+    },
+    {
+        "id": "innocad",
+        "title": "InnoCAD",
+        "date": "2026",
+        "role": "Software development",
+        "description": "A free 3D design app for students to design parts and models for their projects, in the browser or as a desktop app for Windows, macOS and Linux.",
+        "tags": "Software Development • 3D Design • Education",
+        "image": "/logos/innocad.png",
+        "imageFit": "contain",
+        "links": [
+            {
+                "label": "Download",
+                "url": "https://stembotiks.com/innocad"
+            }
+        ]
     },
     {
         "id": "innokit",
@@ -71,7 +92,12 @@ export const portfolioProjects: PortfolioProject[] = [
         "tags": "ROBOTICS • EDUCATION • COLLABORATION",
         "image": "/logos/innokit.png",
         "imageFit": "contain",
-        "links": []
+        "links": [
+            {
+                "label": "Download",
+                "url": "https://stembotiks.com/innokit"
+            }
+        ]
     },
     {
         "id": "abakosem-puzzle",
