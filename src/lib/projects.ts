@@ -40,12 +40,7 @@ export const portfolioProjects: PortfolioProject[] = [
         "description": "Trains image, pose and sound models in the browser so students can teach a computer to recognise things and use the result in their InnoCode projects. An advanced section builds models from text and numbers and explains each result. Everything runs on the student's laptop with TensorFlow.js.",
         "tags": "Software Development • Machine Learning • Education",
         "image": "/images/projects/innoml-mockup.webp",
-        "links": [
-            {
-                "label": "Source code",
-                "url": "https://github.com/desmondknunoo/innoml"
-            }
-        ]
+        "links": []
     },
     {
         "id": "innocode-simulator",
@@ -86,12 +81,7 @@ export const portfolioProjects: PortfolioProject[] = [
         "description": "My Ghana history picture-puzzle game, rebuilt in Flutter from the original Android app for iOS, Android, web, and desktop: slide the tiles back into place while timed history questions pop up. Its admin platform, built with React and Supabase, manages stages, questions, live classroom quizzes, and leaderboards without an app update.",
         "tags": "Software Development • UI Design",
         "image": "/images/projects/abakosem-puzzle.webp",
-        "links": [
-            {
-                "label": "Source code",
-                "url": "https://github.com/desmondknunoo/abakosem-puzzle"
-            }
-        ]
+        "links": []
     },
     {
         "id": "u4nor",
