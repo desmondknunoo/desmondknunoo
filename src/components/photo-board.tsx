@@ -7,16 +7,16 @@ const plates = [
         alt: "Desmond Kwame Nunoo teaching at the Emerging Technologies Centre",
         caption: "Teaching at the ETC",
         href: "/trainings#emerging-technologies-weekend-programme-2025",
-        rotate: "-3deg",
-        position: "md:left-0 md:top-[2%] md:w-[36%]",
+        rotate: "-2.5deg",
+        position: "md:left-0 md:top-0 md:w-[30%]",
     },
     {
         src: "/images/stories/weekend-robotics-teaching.webp",
         alt: "Students gathered around a robot dog during a weekend robotics session",
         caption: "Weekend robotics",
         href: "/trainings#emerging-technologies-weekend-programme-2025",
-        rotate: "2.5deg",
-        position: "md:left-[38%] md:top-[8%] md:w-[28%]",
+        rotate: "2deg",
+        position: "md:left-[33%] md:top-[5%] md:w-[30%]",
     },
     {
         src: "/images/stories/pictures-10.webp",
@@ -24,26 +24,38 @@ const plates = [
         caption: "GRC 2024 champions",
         href: "/featured#robotics-competitions",
         rotate: "-1.5deg",
-        position: "md:right-0 md:top-0 md:w-[24%]",
+        position: "md:right-0 md:top-0 md:w-[32%]",
     },
     {
         src: "/images/stories/etc-robot-demonstration.webp",
         alt: "Visitors watching a robot arm demonstration at the Emerging Technologies Centre",
         caption: "Robot arm demonstration",
         href: "/featured#etc-opening",
-        rotate: "3deg",
-        position: "md:right-[4%] md:bottom-0 md:w-[40%]",
+        rotate: "2deg",
+        position: "md:left-[3%] md:bottom-0 md:w-[32%]",
+    },
+    {
+        src: "/images/stories/galaxy-judges.webp",
+        alt: "Judges at Galaxy International School's Science and Makers' Fair",
+        caption: "Judging the Science & Makers' Fair",
+        href: "/featured#galaxy-science-fair",
+        rotate: "-2deg",
+        position: "md:left-[38%] md:bottom-[4%] md:w-[26%]",
+    },
+    {
+        src: "/images/stories/etc-6.webp",
+        alt: "Certificate presentation at the Emerging Technologies Bootcamp",
+        caption: "Bootcamp certificates",
+        href: "/trainings#emerging-technologies-bootcamp-kgl",
+        rotate: "1.5deg",
+        position: "md:right-[2%] md:bottom-0 md:w-[30%]",
     },
 ];
 
 export function PhotoBoard() {
     return (
         <section aria-label="Photographs from my work" className="mx-auto max-w-7xl px-6 md:px-12">
-            <div className="relative border-l border-accent pl-5 md:h-[40rem] md:pl-10 lg:h-[46rem]">
-                <div
-                    aria-hidden="true"
-                    className="absolute bottom-[2%] left-[6%] hidden aspect-square w-[30%] rounded-full border border-dotted border-ink/25 md:block"
-                />
+            <div className="relative border-l border-accent pl-5 md:h-[38rem] md:pl-10 lg:h-[44rem]">
                 <div className="grid grid-cols-2 gap-x-4 gap-y-6 md:block">
                     {plates.map((plate) => (
                         <Link
@@ -59,7 +71,7 @@ export function PhotoBoard() {
                                         alt={plate.alt}
                                         fill
                                         priority
-                                        sizes="(max-width: 768px) 45vw, 36vw"
+                                        sizes="(max-width: 768px) 45vw, 32vw"
                                         className="object-cover"
                                     />
                                 </div>
