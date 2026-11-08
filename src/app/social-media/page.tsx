@@ -6,12 +6,13 @@ import { Footer } from "@/components/footer";
 import { CollapsibleSection } from "@/components/collapsible-section";
 import { LightboxGallery } from "@/components/lightbox-gallery";
 import { PortfolioHeader } from "@/components/portfolio-header";
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-    title: "Posts | Desmond Kwame Nunoo",
-    description:
-        "Stories and updates from Desmond Kwame Nunoo's work in technology and STEM education.",
-};
+export const metadata: Metadata = pageMetadata({
+    title: 'Posts',
+    description: "Stories and updates from Desmond Kwame Nunoo's work in technology, robotics and STEM education in Ghana.",
+    path: '/social-media',
+})
 
 const postUrl =
     "https://www.linkedin.com/feed/update/urn:li:activity:7439581439316234241/";

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -6,9 +7,21 @@ import { CollapsibleSection } from "@/components/collapsible-section";
 import { PortfolioHeader } from "@/components/portfolio-header";
 import { LightboxGallery } from "@/components/lightbox-gallery";
 import { workItems, getWorkItem } from "@/lib/work";
+import { jsonLd } from "@/lib/seo";
+import { workJsonLd, workMetadata } from "@/lib/work-seo";
 
 export function generateStaticParams() {
     return workItems.map((item) => ({ slug: item.slug }));
+}
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+    const { slug } = await params;
+    const item = getWorkItem(slug);
+    return item ? workMetadata(item) : { title: "Not found", robots: { index: false } };
 }
 
 export default async function WorkDetailPage({
@@ -26,6 +39,7 @@ export default async function WorkDetailPage({
     return (
         <main className="min-h-screen bg-zinc-950">
             <PortfolioHeader />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(workJsonLd(item)) }} />
             <div data-scroll-reveal className="relative h-[45vh] min-h-[320px] w-full overflow-hidden">
                 <Image
                     src={item.thumbnail}

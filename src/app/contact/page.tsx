@@ -2,11 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { SectionPage } from '@/components/section-page'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-    title: 'Contact | Desmond Kwame Nunoo',
-    description: 'Contact Desmond Kwame Nunoo by email or through his public profiles.',
-}
+export const metadata: Metadata = pageMetadata({
+    title: 'Contact',
+    description: "Contact Desmond Kwame Nunoo, a software engineer and STEM educator in Accra, Ghana, by email, LinkedIn, X or GitHub.",
+    path: '/contact',
+})
 
 const contactLinks = [
     { label: 'Email', value: 'desmondknunoo@gmail.com', href: 'mailto:desmondknunoo@gmail.com' },

@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { portfolioNavLinks } from "@/components/site-nav";
 import { workItems } from "@/lib/work";
 import { PortfolioSearch } from "./portfolio-search";
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-    title: "Search | Desmond Kwame Nunoo",
-    description: "Search projects, posts, trainings, publications, and other portfolio pages.",
-};
+export const metadata: Metadata = pageMetadata({
+    title: 'Search',
+    description: "Search projects, posts, trainings, publications and other pages on Desmond Kwame Nunoo's portfolio.",
+    path: '/search', noIndex: true,
+})
 
 export default async function SearchPage({ searchParams }: {
     searchParams: Promise<{ q?: string | string[] }>;

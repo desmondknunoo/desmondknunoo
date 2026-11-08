@@ -7,11 +7,13 @@ import { CollapsibleSection } from '@/components/collapsible-section'
 import { SectionPage } from '@/components/section-page'
 import { coveredTrainings, etcOpeningCoverage } from '@/lib/programme-coverage'
 import { ProgrammeCoverageLinks } from '@/components/programme-coverage-links'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-    title: 'Featured | Desmond Kwame Nunoo',
-    description: 'Programme coverage, event highlights, and recognition from Desmond Kwame Nunoo’s work in technology and education.',
-}
+export const metadata: Metadata = pageMetadata({
+    title: 'Featured',
+    description: "Programme coverage, event highlights and recognition from Desmond Kwame Nunoo's work in technology and STEM education in Ghana.",
+    path: '/featured',
+})
 
 export default function FeaturedPage() {
     return (

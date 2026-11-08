@@ -4,12 +4,13 @@ import { ArrowLeft, ArrowUpRight, Mail } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { CollapsibleSection } from "@/components/collapsible-section";
 import { PortfolioHeader } from "@/components/portfolio-header";
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-    title: "About | Desmond Kwame Nunoo",
-    description:
-        "Professional experience, education, and certifications for Desmond Kwame Nunoo.",
-};
+export const metadata: Metadata = pageMetadata({
+    title: 'About',
+    description: "Experience, education and certifications of Desmond Kwame Nunoo: Senior Software Engineer at Innova Labs Ghana and Emerging Technologies Centre Coordinator at Lancaster University Ghana.",
+    path: '/about', type: 'profile',
+})
 
 const experience = [
     {

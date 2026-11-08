@@ -3,11 +3,13 @@ import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { CollapsibleSection } from '@/components/collapsible-section'
 import { SectionPage } from '@/components/section-page'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-    title: 'Publications | Desmond Kwame Nunoo',
-    description: 'Articles, papers, and research authored or co-authored by Desmond Kwame Nunoo.',
-}
+export const metadata: Metadata = pageMetadata({
+    title: 'Publications',
+    description: "Articles, papers and research by Desmond Kwame Nunoo, including a study of the Emerging Technologies Centre at Lancaster University Ghana.",
+    path: '/publications',
+})
 
 const abstract = [
     'The Emerging Technologies Centre (ETC) at Lancaster University Ghana (LUG) is a shared technological hub designed to provide students across disciplines, community members and corporate partners with access to emerging technologies while promoting collaborative learning, partnership and a sense of belonging. This study explores how the ETC promotes inclusion, skill development and collaboration beyond the provision of technological infrastructure.',

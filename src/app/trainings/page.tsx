@@ -5,11 +5,13 @@ import { CollapsibleSection } from '@/components/collapsible-section'
 import { SectionPage } from '@/components/section-page'
 import { coveredTrainings } from '@/lib/programme-coverage'
 import { ProgrammeCoverageLinks } from '@/components/programme-coverage-links'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-    title: 'Trainings | Desmond Kwame Nunoo',
-    description: 'Training programmes taught, facilitated, or coordinated by Desmond Kwame Nunoo.',
-}
+export const metadata: Metadata = pageMetadata({
+    title: 'Trainings',
+    description: "Robotics, AI, IoT, coding and 3D printing training programmes taught, facilitated or coordinated by Desmond Kwame Nunoo in Ghana.",
+    path: '/trainings',
+})
 
 const trainings = [
     {

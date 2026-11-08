@@ -6,11 +6,14 @@ import { CollapsibleSection } from '@/components/collapsible-section'
 import { SectionPage } from '@/components/section-page'
 import { portfolioProjects, type PortfolioProject } from '@/lib/projects'
 import { getWorkItem, type WorkItem } from '@/lib/work'
+import { pageMetadata, jsonLd } from '@/lib/seo'
+import { projectsJsonLd } from '@/lib/projects-seo'
 
-export const metadata: Metadata = {
-    title: 'Projects | Desmond Kwame Nunoo',
-    description: 'Selected projects and collaborations by Desmond Kwame Nunoo.',
-}
+export const metadata: Metadata = pageMetadata({
+    title: 'Projects',
+    description: 'Software, web, mobile and design projects by Desmond Kwame Nunoo, including Mining Reports, InnoCode, InnoML, Abakosem Puzzle and Zomo Delivery Marketplace.',
+    path: '/projects',
+})
 
 const designWorkSlugs = [
     'mtn-stands-in-worship',
@@ -33,6 +36,7 @@ export default function ProjectsPage() {
             title="Projects"
             description="Selected work I have built, contributed to, or collaborated on."
         >
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(projectsJsonLd()) }} />
             <div>
                 {portfolioProjects.map((project) => <div key={project.title} id={project.id} className="scroll-mt-8"><ProjectEntry project={project} /></div>)}
             </div>
