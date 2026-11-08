@@ -8,8 +8,8 @@ const NUDGE_DURATION = 3200;
 const NUDGE_PAUSE = 700;
 const HIDE_THRESHOLD = 24;
 
-function easeInOutSine(t: number) {
-    return -(Math.cos(Math.PI * t) - 1) / 2;
+function easeOutExpo(t: number) {
+    return t >= 1 ? 1 : 1 - Math.pow(2, -10 * t);
 }
 
 export function ScrollHint() {
@@ -19,6 +19,7 @@ export function ScrollHint() {
         function handleScroll() {
             setVisible(window.scrollY <= HIDE_THRESHOLD);
         }
+        handleScroll();
         window.addEventListener("scroll", handleScroll, { passive: true });
 
         const prefersReducedMotion = window.matchMedia(
@@ -49,7 +50,7 @@ export function ScrollHint() {
             function step(now: number) {
                 if (cancelled) return;
                 const t = Math.min((now - startTime) / NUDGE_DURATION, 1);
-                window.scrollTo(0, startY + NUDGE_DISTANCE * easeInOutSine(t));
+                window.scrollTo(0, startY + NUDGE_DISTANCE * easeOutExpo(t));
                 if (t < 1) {
                     requestAnimationFrame(step);
                 } else {

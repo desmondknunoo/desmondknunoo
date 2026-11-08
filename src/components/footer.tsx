@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { Linkedin, Twitter, Github } from 'lucide-react'
-import { SiteNav } from '@/components/site-nav'
 
 const socialLinks = [
     { icon: Linkedin, href: 'https://linkedin.com/in/desmondknunoo', label: 'LinkedIn' },
@@ -18,7 +17,6 @@ export function Footer() {
                     <p className="text-zinc-500">
                         © {currentYear} Desmond Kwame Nunoo
                     </p>
-                    <SiteNav />
                     <div className="flex gap-2">
                         {socialLinks.map((social, index) => (
                             <Link
