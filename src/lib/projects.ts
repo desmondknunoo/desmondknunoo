@@ -52,14 +52,32 @@ export const portfolioProjects: PortfolioProject[] = [
     {
         "id": "abakosem-puzzle",
         "title": "Abakosem Puzzle",
-        "role": "Software work through Achendo",
-        "description": "A Ghana history picture-puzzle game for iOS, Android, web, and desktop, built in Flutter: slide the tiles back into place while timed history questions pop up. Its admin platform, built with React and Supabase, manages stages, questions, live classroom quizzes, and leaderboards without an app update.",
+        "role": "Own project",
+        "description": "My Ghana history picture-puzzle game, rebuilt in Flutter from the original Android app for iOS, Android, web, and desktop: slide the tiles back into place while timed history questions pop up. Its admin platform, built with React and Supabase, manages stages, questions, live classroom quizzes, and leaderboards without an app update.",
         "tags": "Software Development • UI Design",
         "image": "/images/projects/abakosem-puzzle.webp",
         "links": [
             {
                 "label": "Source code",
                 "url": "https://github.com/desmondknunoo/abakosem-puzzle"
+            }
+        ]
+    },
+    {
+        "id": "u4nor",
+        "title": "U4nor",
+        "role": "UI/UX design and Android development",
+        "description": "An Android app with campus news curated for tertiary students in Ghana: news, trending stories, rumours, events, and entertainment.",
+        "tags": "UI/UX Design • Android",
+        "image": "/images/u4norImage.jpg",
+        "links": [
+            {
+                "label": "Behance",
+                "url": "https://www.behance.net/gallery/91548529/U4nor-Android-App-UIUX"
+            },
+            {
+                "label": "Google Play Store",
+                "url": "https://play.google.com/store/apps/details?id=com.u4nor.android"
             }
         ]
     },

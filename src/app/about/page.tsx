@@ -290,7 +290,8 @@ const expertise = [
 const achievements = [
     "Coached a student team to first place in the Stars League at the 2024 Ghana Robotics Competition with a Raspberry Pi Pico-powered HoleyBot.",
     "Contributed to Antrak Express’s delivery management software suite and developed InnoCode for programming local microcontrollers.",
-    "Developed and contributed to software through Achendo, including Fluid, Squeeze, Keyring, and Abakosem Puzzle.",
+    "Built Abakosem Puzzle, a Ghana history puzzle game in Flutter with a React and Supabase admin platform.",
+    "Developed and contributed to software through Achendo, including Fluid, Squeeze, and Keyring.",
     "Contributed to InnoKit, a robotics learning kit.",
 ];
 
