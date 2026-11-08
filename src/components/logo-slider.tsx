@@ -13,7 +13,7 @@ function OrganizationLogos() {
     return organizations.map((organization) => (
         <div key={organization.name} className="flex h-24 shrink-0 items-center justify-center">
             {!organization.logo ? (
-                <span className="max-w-40 text-center text-sm text-zinc-200">{organization.name}</span>
+                <span className="max-w-40 text-center text-sm text-ink">{organization.name}</span>
             ) : (
                 <Image
                     src={organization.logo.src}
@@ -44,10 +44,10 @@ export function LogoSlider() {
     const reduceMotion = useReducedMotion();
 
     return (
-        <section aria-label="Organizations I've worked with" className="border-t border-zinc-800 bg-black py-8">
+        <section aria-label="Organizations I've worked with" className="mt-16 border-t border-rule bg-paper py-8 md:mt-24">
             <div className="relative m-auto max-w-7xl px-6">
                 <div className="flex flex-col items-center gap-4 md:flex-row md:gap-8">
-                    <h2 className="shrink-0 text-center text-sm leading-6 text-zinc-400 md:w-36 md:border-r md:border-zinc-700 md:pr-6 md:text-right">
+                    <h2 className="font-display shrink-0 text-center text-[12px] uppercase leading-5 tracking-[0.22em] text-ink md:w-40 md:border-r md:border-rule md:pr-6 md:text-right">
                         Organizations I&apos;ve worked with
                     </h2>
                     <ul className="sr-only">

@@ -51,12 +51,12 @@ function ProjectEntry({ project }: { project: PortfolioProject }) {
                     <CollapsibleSection
                         key={project.title}
                         title={project.title}
-                        className="border-b border-zinc-800 py-8"
+                        className="border-b border-rule py-8"
                         summaryClassName="py-0"
-                        titleClassName="text-2xl font-semibold text-zinc-100"
+                        titleClassName="text-2xl font-semibold text-ink"
                         contentClassName="mt-6 grid gap-6 pb-0 md:grid-cols-[minmax(0,1fr)_minmax(18rem,0.8fr)] md:items-center md:gap-12"
                     >
-                        <div className="relative aspect-video overflow-hidden bg-zinc-900">
+                        <div className="relative aspect-video overflow-hidden bg-paper-raised">
                             <Image
                                 src={project.image}
                                 alt={project.title}
@@ -66,9 +66,9 @@ function ProjectEntry({ project }: { project: PortfolioProject }) {
                             />
                         </div>
                         <div>
-                            <p className="text-sm text-zinc-400">{project.tags}</p>
-                            <p className="mt-3 text-sm font-medium text-zinc-200">{[project.role, project.date ?? "Date unavailable"].filter(Boolean).join(" · ")}</p>
-                            <p className="mt-3 leading-7 text-zinc-300">{project.description}</p>
+                            <p className="text-sm text-ink-muted">{project.tags}</p>
+                            <p className="mt-3 text-sm font-medium text-ink">{[project.role, project.date ?? "Date unavailable"].filter(Boolean).join(" · ")}</p>
+                            <p className="mt-3 leading-7 text-ink">{project.description}</p>
                             <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3">
                                 {project.links.map((item) => (
                                     <Link
@@ -76,7 +76,7 @@ function ProjectEntry({ project }: { project: PortfolioProject }) {
                                         href={item.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300"
+                                        className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-ink underline decoration-ink/40 underline-offset-4 hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                                     >
                                         {item.label}<ExternalLink className="h-4 w-4" />
                                     </Link>
@@ -95,7 +95,7 @@ function DesignWork() {
             title="Design Work"
             className="py-12"
             summaryClassName="py-0"
-            titleClassName="text-3xl font-semibold tracking-tight text-zinc-100"
+            titleClassName="text-3xl font-semibold tracking-tight text-ink"
             summaryDescription="3D event design, print, packaging, and presentation work."
             contentClassName="mt-8 pb-0"
         >
@@ -104,9 +104,9 @@ function DesignWork() {
                     <li key={item.slug}>
                         <Link
                             href={`/work/${item.slug}`}
-                            className="group/tile block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300 focus-visible:ring-offset-4 focus-visible:ring-offset-zinc-950"
+                            className="group/tile block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-paper"
                         >
-                            <div className="relative aspect-video overflow-hidden bg-zinc-900">
+                            <div className="relative aspect-video overflow-hidden bg-paper-raised">
                                 <Image
                                     src={item.thumbnail}
                                     alt=""
@@ -115,10 +115,10 @@ function DesignWork() {
                                     className="object-cover transition-opacity duration-300 group-hover/tile:opacity-80"
                                 />
                             </div>
-                            <h3 className="mt-3 text-base font-semibold leading-snug text-zinc-100 underline decoration-transparent underline-offset-4 transition-colors group-hover/tile:decoration-zinc-400">
+                            <h3 className="mt-3 text-base font-semibold leading-snug text-ink underline decoration-transparent underline-offset-4 transition-colors group-hover/tile:decoration-accent">
                                 {item.title}
                             </h3>
-                            <p className="mt-1 text-sm leading-6 text-zinc-400">
+                            <p className="mt-1 text-sm leading-6 text-ink-muted">
                                 {[item.category, item.date].filter(Boolean).join(' · ')}
                             </p>
                         </Link>

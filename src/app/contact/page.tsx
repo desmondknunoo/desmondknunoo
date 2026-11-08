@@ -24,19 +24,19 @@ export default function ContactPage() {
             description="Reach me by email or through my public profiles. I am based in Accra, Ghana."
             collapsible={false}
         >
-            <dl className="divide-y divide-zinc-800">
+            <dl className="divide-y divide-rule">
                 {contactLinks.map((contact) => (
                     <div
                         key={contact.label}
                         className="grid gap-2 py-6 sm:grid-cols-[12rem_minmax(0,1fr)] sm:items-center"
                     >
-                        <dt className="text-sm text-zinc-400">{contact.label}</dt>
+                        <dt className="text-sm text-ink-muted">{contact.label}</dt>
                         <dd>
                             <Link
                                 href={contact.href}
                                 target={contact.label === 'Email' ? undefined : '_blank'}
                                 rel={contact.label === 'Email' ? undefined : 'noopener noreferrer'}
-                                className="inline-flex min-h-11 items-center gap-2 text-lg font-medium text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300"
+                                className="inline-flex min-h-11 items-center gap-2 text-lg font-medium text-ink underline decoration-ink/40 underline-offset-4 hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                             >
                                 {contact.value}<ArrowUpRight className="h-4 w-4" />
                             </Link>
@@ -44,8 +44,8 @@ export default function ContactPage() {
                     </div>
                 ))}
                 <div className="grid gap-2 py-6 sm:grid-cols-[12rem_minmax(0,1fr)] sm:items-center">
-                    <dt className="text-sm text-zinc-400">Location</dt>
-                    <dd className="text-lg text-zinc-100">Accra, Ghana</dd>
+                    <dt className="text-sm text-ink-muted">Location</dt>
+                    <dd className="text-lg text-ink">Accra, Ghana</dd>
                 </div>
             </dl>
         </SectionPage>

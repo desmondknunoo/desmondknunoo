@@ -347,38 +347,38 @@ const certifications = [
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen bg-zinc-950 text-zinc-100">
+        <main className="min-h-screen bg-paper text-ink">
             <PortfolioHeader />
             <div className="mx-auto max-w-7xl px-6 md:px-12">
                 <Link
                     href="/"
-                    className="mt-16 inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white"
+                    className="mt-8 inline-flex min-h-11 items-center gap-2 text-sm text-ink-muted transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
-                    <ArrowLeft className="h-4 w-4" />
-                    Back to portfolio
+                    <ArrowLeft className="h-4 w-4" strokeWidth={1.5} />
+                    Home
                 </Link>
 
                 <CollapsibleSection
                     title="About me"
                     headingLevel="h1"
-                    className="border-b border-zinc-800 py-12 lg:py-20"
+                    className="border-b border-rule py-10 lg:py-14"
                     summaryClassName="py-0"
-                    titleClassName="max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl"
+                    titleClassName="font-display max-w-4xl text-2xl uppercase leading-tight tracking-[0.12em] text-ink md:text-[2.5rem]"
                     contentClassName="grid gap-8 pt-6 pb-0 lg:grid-cols-[1fr_20rem] lg:items-end"
                 >
-                    <p className="max-w-3xl text-lg leading-8 text-zinc-300">
+                    <p className="max-w-3xl text-lg leading-8 text-ink">
                         I&apos;m Desmond Kwame Nunoo, a technology professional,
                         STEM educator, and designer based in Ghana. I bring
                         together software, robotics, AI, and design to help
                         people turn ideas into useful products and learning
                         experiences.
                     </p>
-                    <div className="text-sm leading-6 text-zinc-400 lg:justify-self-end">
-                        <p className="font-medium text-zinc-100">Accra, Ghana</p>
+                    <div className="text-sm leading-6 text-ink-muted lg:justify-self-end">
+                        <p className="font-medium text-ink">Accra, Ghana</p>
                         <p>STEM education · Robotics · AI · Product design</p>
                         <Link
                             href="mailto:desmondknunoo@gmail.com"
-                            className="mt-4 inline-flex items-center gap-2 text-zinc-100 underline decoration-zinc-600 underline-offset-4 transition-colors hover:decoration-white"
+                            className="mt-4 inline-flex items-center gap-2 text-ink underline decoration-ink/40 underline-offset-4 transition-colors hover:decoration-accent"
                         >
                             <Mail className="h-4 w-4" />
                             Get in touch
@@ -391,14 +391,14 @@ export default function AboutPage() {
                     summaryDescription="A multidisciplinary toolkit across technology, product, design, and education."
                     className="py-12 lg:py-16"
                     summaryClassName="py-0 lg:grid lg:grid-cols-[14rem_1fr] lg:gap-16"
-                    titleClassName="text-2xl font-semibold"
+                    titleClassName="font-display text-[13px] uppercase tracking-[0.22em] text-ink"
                     contentClassName="pt-6 lg:pl-[calc(14rem+4rem)]"
                 >
-                    <dl className="divide-y divide-zinc-800">
+                    <dl className="divide-y divide-rule">
                         {expertise.map((item) => (
                             <div key={item.area} className="grid gap-2 py-5 first:pt-0 sm:grid-cols-[13rem_1fr] sm:gap-6">
-                                <dt className="font-medium text-zinc-100">{item.area}</dt>
-                                <dd className="text-sm leading-6 text-zinc-300">{item.details}</dd>
+                                <dt className="font-medium text-ink">{item.area}</dt>
+                                <dd className="text-sm leading-6 text-ink">{item.details}</dd>
                             </div>
                         ))}
                     </dl>
@@ -409,31 +409,31 @@ export default function AboutPage() {
                     summaryDescription="Building technology and learning programs across software, robotics, design, and education."
                     className="py-12 lg:py-16"
                     summaryClassName="py-0 lg:grid lg:grid-cols-[14rem_1fr] lg:gap-16"
-                    titleClassName="text-2xl font-semibold"
+                    titleClassName="font-display text-[13px] uppercase tracking-[0.22em] text-ink"
                     contentClassName="pt-6 lg:pl-[calc(14rem+4rem)]"
                 >
-                    <div className="divide-y divide-zinc-800">
+                    <div className="divide-y divide-rule">
                         {experience.map((item) => (
                             <CollapsibleSection
                                 key={`${item.organization}-${item.role}`}
                                 title={item.role}
                                 headingLevel="h3"
                                 summaryDescription={`${item.organization} · ${item.type}`}
-                                summaryDescriptionClassName="!mt-1 text-zinc-300"
+                                summaryDescriptionClassName="!mt-1 text-ink"
                                 initiallyOpen={false}
                                 className="py-5"
                                 summaryClassName="py-0"
                                 titleClassName="text-lg font-medium"
                                 contentClassName="mt-4 grid gap-4 pb-0 sm:grid-cols-[14rem_minmax(0,1fr)]"
                             >
-                                <p className="text-sm leading-6 text-zinc-400 sm:order-2 sm:text-right">
+                                <p className="text-sm leading-6 text-ink-muted sm:order-2 sm:text-right">
                                     {item.dates}<span className="mt-1 block">{item.location}</span>
                                 </p>
                                 {item.details.length > 0 && (
-                                    <ul className="space-y-2 text-sm leading-6 text-zinc-300 sm:order-1">
+                                    <ul className="space-y-2 text-sm leading-6 text-ink sm:order-1">
                                         {item.details.map((detail) => (
                                             <li key={detail} className="flex gap-3">
-                                                <span aria-hidden="true" className="text-zinc-500">—</span>
+                                                <span aria-hidden="true" className="text-ink-faint">—</span>
                                                 <span>{detail}</span>
                                             </li>
                                         ))}
@@ -449,13 +449,13 @@ export default function AboutPage() {
                     summaryDescription="Selected outcomes from software, robotics, and open-source work."
                     className="py-12 lg:py-16"
                     summaryClassName="py-0 lg:grid lg:grid-cols-[14rem_1fr] lg:gap-16"
-                    titleClassName="text-2xl font-semibold"
+                    titleClassName="font-display text-[13px] uppercase tracking-[0.22em] text-ink"
                     contentClassName="pt-6 lg:pl-[calc(14rem+4rem)]"
                 >
-                    <ul className="max-w-3xl divide-y divide-zinc-800">
+                    <ul className="max-w-3xl divide-y divide-rule">
                         {achievements.map((achievement) => (
                             <li key={achievement} className="py-5 first:pt-0">
-                                <p className="text-sm leading-6 text-zinc-300">{achievement}</p>
+                                <p className="text-sm leading-6 text-ink">{achievement}</p>
                             </li>
                         ))}
                     </ul>
@@ -466,7 +466,7 @@ export default function AboutPage() {
                     summaryDescription="A foundation in science, programming, and design."
                     className="py-12 lg:py-16"
                     summaryClassName="py-0 lg:grid lg:grid-cols-[14rem_1fr] lg:gap-16"
-                    titleClassName="text-2xl font-semibold"
+                    titleClassName="font-display text-[13px] uppercase tracking-[0.22em] text-ink"
                     contentClassName="pt-6 lg:pl-[calc(14rem+4rem)]"
                 >
                     <div>
@@ -476,13 +476,13 @@ export default function AboutPage() {
                                 title={item.school}
                                 headingLevel="h3"
                                 summaryDescription={`${item.qualification} · ${item.year}`}
-                                summaryDescriptionClassName="!mt-1 text-zinc-300"
+                                summaryDescriptionClassName="!mt-1 text-ink"
                                 initiallyOpen={false}
                                 className="py-5"
                                 summaryClassName="py-0"
                                 titleClassName="text-lg font-medium"
                             >
-                                <p className="text-sm leading-6 text-zinc-400">{item.details}</p>
+                                <p className="text-sm leading-6 text-ink-muted">{item.details}</p>
                             </CollapsibleSection>
                         ))}
                     </div>
@@ -493,10 +493,10 @@ export default function AboutPage() {
                     summaryDescription="Organizations and teams I&apos;ve worked with."
                     className="py-12 lg:py-16"
                     summaryClassName="py-0 lg:grid lg:grid-cols-[14rem_1fr] lg:gap-16"
-                    titleClassName="text-2xl font-semibold"
+                    titleClassName="font-display text-[13px] uppercase tracking-[0.22em] text-ink"
                     contentClassName="pt-6 lg:pl-[calc(14rem+4rem)]"
                 >
-                    <p className="max-w-3xl text-sm leading-7 text-zinc-300">
+                    <p className="max-w-3xl text-sm leading-7 text-ink">
                         {collaborators}
                     </p>
                 </CollapsibleSection>
@@ -506,10 +506,10 @@ export default function AboutPage() {
                     summaryDescription="AI, connected hardware, immersive technology, 3D design, and software development."
                     className="py-12 lg:py-16"
                     summaryClassName="py-0 lg:grid lg:grid-cols-[14rem_1fr] lg:gap-16"
-                    titleClassName="text-2xl font-semibold"
+                    titleClassName="font-display text-[13px] uppercase tracking-[0.22em] text-ink"
                     contentClassName="pt-6 lg:pl-[calc(14rem+4rem)]"
                 >
-                    <p className="max-w-3xl text-sm leading-7 text-zinc-300">
+                    <p className="max-w-3xl text-sm leading-7 text-ink">
                         {technicalFocus}
                     </p>
                 </CollapsibleSection>
@@ -519,15 +519,15 @@ export default function AboutPage() {
                     summaryDescription="Selected professional development and credentials."
                     className="py-12 lg:py-16"
                     summaryClassName="py-0 lg:grid lg:grid-cols-[14rem_1fr] lg:gap-16"
-                    titleClassName="text-2xl font-semibold"
+                    titleClassName="font-display text-[13px] uppercase tracking-[0.22em] text-ink"
                     contentClassName="pt-6 lg:pl-[calc(14rem+4rem)]"
                 >
-                    <ul className="divide-y divide-zinc-800">
+                    <ul className="divide-y divide-rule">
                         {certifications.map((item) => (
                             <li key={item.name} className="flex flex-col justify-between gap-3 py-5 first:pt-0 sm:flex-row sm:items-center">
                                 <div>
                                     <h3 className="font-medium">{item.name}</h3>
-                                    <p className="mt-1 text-sm text-zinc-400">
+                                    <p className="mt-1 text-sm text-ink-muted">
                                         {item.issuer} <span aria-hidden="true">·</span> Issued {item.issued}
                                     </p>
                                 </div>
@@ -536,7 +536,7 @@ export default function AboutPage() {
                                         href={item.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex w-fit shrink-0 items-center gap-2 text-sm text-zinc-200 underline decoration-zinc-600 underline-offset-4 transition-colors hover:decoration-white"
+                                        className="inline-flex w-fit shrink-0 items-center gap-2 text-sm text-ink underline decoration-ink/40 underline-offset-4 transition-colors hover:decoration-accent"
                                     >
                                         View credential
                                         <ArrowUpRight className="h-4 w-4" />
@@ -549,14 +549,14 @@ export default function AboutPage() {
 
                 <CollapsibleSection
                     title="Interested in working together?"
-                    className="mb-16 border-t border-zinc-800 pt-8"
+                    className="mb-16 border-t border-rule pt-8"
                     summaryClassName="py-0"
-                    titleClassName="text-lg font-medium text-zinc-300"
+                    titleClassName="text-lg font-medium text-ink"
                     contentClassName="pt-5"
                 >
                     <Link
                         href="mailto:desmondknunoo@gmail.com"
-                        className="inline-flex items-center gap-2 text-sm font-medium text-white underline decoration-zinc-600 underline-offset-4 hover:decoration-white"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-ink underline decoration-ink/40 underline-offset-4 hover:decoration-accent"
                     >
                         Let&apos;s talk
                         <ArrowUpRight className="h-4 w-4" />

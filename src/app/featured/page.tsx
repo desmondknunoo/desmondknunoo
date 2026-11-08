@@ -30,13 +30,13 @@ export default function FeaturedPage() {
                     summaryClassName="py-0"
                     contentClassName="mt-4 pb-0"
                 >
-                    <p className="max-w-3xl leading-7 text-zinc-300">{training.details}</p>
+                    <p className="max-w-3xl leading-7 text-ink">{training.details}</p>
                     <div className="mt-6"><LightboxGallery images={training.images} postUrl={training.coverage[0].href} sourceLabel="Read programme coverage" /></div>
                     <ProgrammeCoverageLinks articles={training.coverage} />
                     <div className="mt-4">
                         <Link
                             href={`/trainings#${training.id}`}
-                            className="inline-flex min-h-11 items-center text-sm text-zinc-300 underline decoration-zinc-600 underline-offset-4 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300"
+                            className="inline-flex min-h-11 items-center text-sm text-ink underline decoration-ink/40 underline-offset-4 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                         >
                             View training <span className="sr-only">details for {training.title}</span>
                         </Link>
@@ -50,13 +50,13 @@ export default function FeaturedPage() {
                 summaryClassName="py-0"
                 contentClassName="mt-4 pb-0"
             >
-                <p className="max-w-3xl leading-7 text-zinc-300">{etcOpeningCoverage.details}</p>
+                <p className="max-w-3xl leading-7 text-ink">{etcOpeningCoverage.details}</p>
                 <div className="mt-6"><LightboxGallery images={etcOpeningPhotos} postUrl={etcOpeningCoverage.coverage.href} sourceLabel="Read the unveiling article" /></div>
                 <Link
                     href={etcOpeningCoverage.coverage.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-flex min-h-11 items-center gap-2 text-sm text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300"
+                    className="mt-4 inline-flex min-h-11 items-center gap-2 text-sm text-ink underline decoration-ink/40 underline-offset-4 hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                     Read the unveiling article <ArrowUpRight aria-hidden="true" className="h-4 w-4 shrink-0" />
                 </Link>
@@ -66,16 +66,16 @@ export default function FeaturedPage() {
                 <LightboxGallery images={roboticsRecognitionPhotos} />
             </CollapsibleSection>
             <CollapsibleSection id="galaxy-science-fair" title="Science & Makers’ Fair — Galaxy International School (2025)" className="py-8" contentClassName="mt-4 pb-0">
-                <p className="mb-6 max-w-3xl leading-7 text-zinc-300">I represented Lancaster University Ghana as a judge at Galaxy International School’s Science &amp; Makers’ Fair and STEAM Competition 2025.</p>
+                <p className="mb-6 max-w-3xl leading-7 text-ink">I represented Lancaster University Ghana as a judge at Galaxy International School’s Science &amp; Makers’ Fair and STEAM Competition 2025.</p>
                 <LightboxGallery images={galaxyPhotos} postUrl="https://www.linkedin.com/feed/update/urn:li:activity:7330606104315314178/" />
             </CollapsibleSection>
             <CollapsibleSection title="Press and interviews" className="py-8">
-                <p className="mt-3 max-w-2xl leading-7 text-zinc-400">
+                <p className="mt-3 max-w-2xl leading-7 text-ink-muted">
                     For press and interview enquiries, get in touch.
                 </p>
                 <Link
                     href="/contact"
-                    className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300"
+                    className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-ink underline decoration-ink/40 underline-offset-4 hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                     Contact me <ArrowUpRight className="h-4 w-4" />
                 </Link>

@@ -13,24 +13,34 @@ export default function OpengraphImage() {
                     width: '100%',
                     height: '100%',
                     display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    padding: '80px',
-                    background: '#09090b',
-                    color: '#fafafa',
+                    background: '#faf8f3',
+                    color: '#141414',
                     fontFamily: 'sans-serif',
                 }}
             >
-                <div style={{ display: 'flex', fontSize: 28, color: '#a1a1aa' }}>{siteUrl.replace(/^https?:\/\//, '')}</div>
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ fontSize: 92, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.05 }}>
-                        Desmond Kwame Nunoo
+                <div style={{ width: 4, height: '100%', background: '#1f4fd8' }} />
+                <div
+                    style={{
+                        flex: 1,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between',
+                        padding: '72px 80px 72px 76px',
+                    }}
+                >
+                    <div style={{ display: 'flex', fontSize: 24, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#5b5853' }}>
+                        {siteUrl.replace(/^https?:\/\//, '')}
                     </div>
-                    <div style={{ marginTop: 28, fontSize: 38, color: '#d4d4d8' }}>
-                        Software engineer, designer and STEM educator
-                    </div>
-                    <div style={{ marginTop: 14, fontSize: 30, color: '#a1a1aa' }}>
-                        Robotics · AI · IoT · 3D design and printing · Accra, Ghana
+                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        <div style={{ fontSize: 76, fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', lineHeight: 1.1 }}>
+                            Desmond Kwame Nunoo
+                        </div>
+                        <div style={{ marginTop: 30, fontSize: 36, lineHeight: 1.35 }}>
+                            Software engineer, designer and STEM educator
+                        </div>
+                        <div style={{ marginTop: 12, fontSize: 28, color: '#5b5853' }}>
+                            Robotics · AI · IoT · 3D design and printing · Accra, Ghana
+                        </div>
                     </div>
                 </div>
             </div>

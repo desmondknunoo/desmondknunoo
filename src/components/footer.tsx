@@ -1,36 +1,36 @@
 import Link from 'next/link'
-import { Linkedin, Twitter, Github } from 'lucide-react'
 
 const socialLinks = [
-    { icon: Linkedin, href: 'https://linkedin.com/in/desmondknunoo', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://x.com/desmondknunoo', label: 'Twitter' },
-    { icon: Github, href: 'https://github.com/desmondknunoo', label: 'GitHub' },
+    { href: 'https://linkedin.com/in/desmondknunoo', label: 'LinkedIn' },
+    { href: 'https://x.com/desmondknunoo', label: 'X' },
+    { href: 'https://github.com/desmondknunoo', label: 'GitHub' },
 ]
 
 export function Footer() {
     const currentYear = new Date().getFullYear()
 
     return (
-        <footer className="bg-zinc-950 px-6 py-12 lg:px-12">
-            <div className="mx-auto max-w-7xl">
-                <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-                    <p className="text-zinc-500">
-                        © {currentYear} Desmond Kwame Nunoo
-                    </p>
-                    <div className="flex gap-2">
-                        {socialLinks.map((social, index) => (
-                            <Link
-                                key={index}
-                                href={social.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={social.label}
-                                className="flex h-11 w-11 items-center justify-center rounded-full text-zinc-400 transition-colors hover:bg-zinc-800 hover:text-zinc-200"
-                            >
-                                <social.icon className="h-5 w-5" />
-                            </Link>
+        <footer className="border-t border-rule">
+            <div className="mx-auto max-w-7xl px-6 py-12 md:px-12 md:py-16">
+                <p aria-hidden="true" className="font-display text-center text-xl uppercase tracking-[0.3em] text-ink md:text-3xl">
+                    Desmond Kwame Nunoo
+                </p>
+                <div className="mt-10 flex flex-col items-center gap-6 md:flex-row md:justify-between">
+                    <p className="text-sm text-ink-muted">© {currentYear} Desmond Kwame Nunoo</p>
+                    <ul className="flex gap-6">
+                        {socialLinks.map((social) => (
+                            <li key={social.href}>
+                                <Link
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex min-h-11 items-center text-sm text-ink underline-offset-[5px] transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                                >
+                                    {social.label}
+                                </Link>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
                 </div>
             </div>
         </footer>

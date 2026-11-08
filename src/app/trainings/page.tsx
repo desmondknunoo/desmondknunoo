@@ -50,14 +50,14 @@ export default function TrainingsPage() {
                             title={training.title}
                             className="py-8"
                             summaryClassName="py-0"
-                            titleClassName="text-xl font-semibold text-zinc-100"
+                            titleClassName="text-xl font-semibold text-ink"
                             contentClassName="mt-4 grid gap-3 pb-0 md:grid-cols-[minmax(0,1fr)_16rem] md:gap-x-12"
                         >
                             <div className="max-w-3xl">
-                                <p className="leading-7 text-zinc-300">{training.details}</p>
+                                <p className="leading-7 text-ink">{training.details}</p>
                                 <ProgrammeCoverageLinks articles={training.coverage} />
                             </div>
-                            <p className="text-sm leading-6 text-zinc-400">{training.organization}</p>
+                            <p className="text-sm leading-6 text-ink-muted">{training.organization}</p>
                             <div className="mt-5 md:col-span-2">
                                 <LightboxGallery images={training.images} postUrl={training.coverage[0].href} sourceLabel="Read programme coverage" />
                             </div>
@@ -66,18 +66,18 @@ export default function TrainingsPage() {
                 ))}
                 <div id="eclectic-love-design-thinking" className="scroll-mt-8">
                     <CollapsibleSection title="Design Thinking — Eclectic Love" summaryDescription="TechSpark Summer Innovation Challenge 2026" className="py-8" contentClassName="mt-4 pb-0">
-                        <p className="mb-6 max-w-3xl leading-7 text-zinc-300">I facilitated Design Thinking at Eclectic Love’s TechSpark Summer Innovation Challenge. The 26 slides below cover how to understand the people affected by a problem, define the problem, and decide what to learn next.</p>
+                        <p className="mb-6 max-w-3xl leading-7 text-ink">I facilitated Design Thinking at Eclectic Love’s TechSpark Summer Innovation Challenge. The 26 slides below cover how to understand the people affected by a problem, define the problem, and decide what to learn next.</p>
                         <LightboxGallery images={designThinkingSlides} />
                     </CollapsibleSection>
                 </div>
                 <div id="emerging-technologies-weekend-2026" className="scroll-mt-8">
                     <CollapsibleSection title="Emerging Technology Weekend Programme — June 2026" summaryDescription="Automation" className="py-8" contentClassName="mt-4 pb-0">
-                        <p className="mb-6 max-w-3xl leading-7 text-zinc-300">I taught Automation during the June 2026 Emerging Technology Weekend Programme.</p>
+                        <p className="mb-6 max-w-3xl leading-7 text-ink">I taught Automation during the June 2026 Emerging Technology Weekend Programme.</p>
                         <LightboxGallery images={emergingWeekendPhotos} />
                     </CollapsibleSection>
                 </div>
                 <CollapsibleSection id="robotics-coaching" title="Robotics coaching and competition preparation" summaryDescription="Date unavailable" className="py-8" contentClassName="mt-4 pb-0">
-                    <p className="mb-6 max-w-3xl leading-7 text-zinc-300">Hands-on guidance and learning through robotics competitions.</p>
+                    <p className="mb-6 max-w-3xl leading-7 text-ink">Hands-on guidance and learning through robotics competitions.</p>
                     <LightboxGallery images={roboticsTrainingPhotos} />
                 </CollapsibleSection>
                 {trainings.map((training) => (
@@ -87,11 +87,11 @@ export default function TrainingsPage() {
                         summaryDescription={training.date}
                         className="py-8"
                         summaryClassName="py-0"
-                        titleClassName="text-xl font-semibold text-zinc-100"
+                        titleClassName="text-xl font-semibold text-ink"
                         contentClassName="mt-4 grid gap-3 pb-0 md:grid-cols-[minmax(0,1fr)_16rem] md:gap-12"
                     >
-                        <p className="leading-7 text-zinc-300">{training.details}</p>
-                        <p className="text-sm leading-6 text-zinc-400">{training.organization}</p>
+                        <p className="leading-7 text-ink">{training.details}</p>
+                        <p className="text-sm leading-6 text-ink-muted">{training.organization}</p>
                     </CollapsibleSection>
                 ))}
             </div>

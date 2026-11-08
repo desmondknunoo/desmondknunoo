@@ -86,19 +86,19 @@ export function PortfolioSearch({ pages, initialQuery }: { pages: Page[]; initia
             search={<SearchBar query={query} onQueryChange={setQuery} />}
         >
             <CollapsibleSection title="Search results" className="max-w-3xl py-8" contentClassName="pt-2">
-                <p role="status" className="mt-4 text-sm text-zinc-400">
+                <p role="status" className="mt-4 text-sm text-ink-muted">
                     {hasQuery ? (index ? `${matches.length} ${matches.length === 1 ? "result" : "results"}` : "Loading portfolio content…") : "Enter a keyword to search."}
                     {hasQuery && missing > 0 && ` · ${missing} ${missing === 1 ? "page was" : "pages were"} unavailable.`}
                 </p>
                 {matches.length > 0 && (
-                    <ul className="mt-2 divide-y divide-zinc-800">
+                    <ul className="mt-2 divide-y divide-rule">
                         {matches.map(({ page, best }) => (
                             <li key={page.href} className="py-4">
-                                <Link href={best?.href ?? page.href} className="font-semibold text-zinc-100 underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300">
+                                <Link href={best?.href ?? page.href} className="font-semibold text-ink underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
                                     {best?.title ?? page.label}
                                 </Link>
-                                {best?.title && best.title !== page.label && <p className="mt-1 text-xs text-zinc-400">{page.label}</p>}
-                                {best?.text && <p className="mt-2 line-clamp-2 text-sm leading-6 text-zinc-300">{best.text}</p>}
+                                {best?.title && best.title !== page.label && <p className="mt-1 text-xs text-ink-muted">{page.label}</p>}
+                                {best?.text && <p className="mt-2 line-clamp-2 text-sm leading-6 text-ink">{best.text}</p>}
                             </li>
                         ))}
                     </ul>

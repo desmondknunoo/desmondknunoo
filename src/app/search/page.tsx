@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { portfolioNavLinks } from "@/components/site-nav";
+import { portfolioNavLinks } from "@/lib/nav-links";
 import { workItems } from "@/lib/work";
 import { PortfolioSearch } from "./portfolio-search";
 import { pageMetadata } from '@/lib/seo'

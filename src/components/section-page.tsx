@@ -15,14 +15,14 @@ type SectionPageProps = {
 
 export function SectionPage({ title, description, children, collapsible = true, search }: SectionPageProps) {
     return (
-        <main className="min-h-screen bg-zinc-950 text-zinc-100">
+        <main className="min-h-screen bg-paper text-ink">
             <PortfolioHeader search={search} />
             <div className="mx-auto max-w-7xl px-6 md:px-12">
                 <Link
                     href="/"
-                    className="mt-16 inline-flex min-h-11 items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300"
+                    className="mt-8 inline-flex min-h-11 items-center gap-2 text-sm text-ink-muted transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
-                    <ArrowLeft className="h-4 w-4" />
+                    <ArrowLeft className="h-4 w-4" strokeWidth={1.5} />
                     Home
                 </Link>
 
@@ -30,12 +30,12 @@ export function SectionPage({ title, description, children, collapsible = true, 
                     title={title}
                     headingLevel="h1"
                     collapsible={collapsible}
-                    className="border-b border-zinc-800 py-12 md:py-16"
+                    className="border-b border-rule py-10 md:py-14"
                     summaryClassName="py-0"
-                    titleClassName="max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl"
-                    contentClassName="mt-5 pb-0"
+                    titleClassName="font-display max-w-4xl text-2xl uppercase leading-tight tracking-[0.12em] text-ink md:text-[2.5rem]"
+                    contentClassName="mt-6 pb-0"
                 >
-                    <p className="max-w-2xl text-lg leading-8 text-zinc-300">
+                    <p className="max-w-2xl text-[1.15rem] leading-[1.6] text-ink">
                         {description}
                     </p>
                 </CollapsibleSection>

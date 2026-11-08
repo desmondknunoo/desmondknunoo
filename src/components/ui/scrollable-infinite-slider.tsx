@@ -61,7 +61,7 @@ export function ScrollableInfiniteSlider({ children, duration, gap, label, autoP
             role="region"
             aria-label={label}
             tabIndex={0}
-            className="cursor-grab overflow-x-auto overflow-y-hidden overscroll-x-contain select-none active:cursor-grabbing focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-zinc-500 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="cursor-grab overflow-x-auto overflow-y-hidden overscroll-x-contain select-none active:cursor-grabbing focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-accent [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             onScroll={wrapScroll}
             onMouseEnter={() => { hovered.current = true; }}
             onMouseLeave={() => { hovered.current = false; }}

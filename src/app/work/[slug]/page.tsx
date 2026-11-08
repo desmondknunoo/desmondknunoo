@@ -37,42 +37,40 @@ export default async function WorkDetailPage({
     }
 
     return (
-        <main className="min-h-screen bg-zinc-950">
+        <main className="min-h-screen bg-paper">
             <PortfolioHeader />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(workJsonLd(item)) }} />
-            <div data-scroll-reveal className="relative h-[45vh] min-h-[320px] w-full overflow-hidden">
-                <Image
-                    src={item.thumbnail}
-                    alt={item.title}
-                    fill
-                    priority
-                    className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-zinc-950/10" />
-                <div className="absolute inset-0 flex flex-col justify-end px-6 pb-10 lg:px-12">
-                    <div className="mx-auto w-full max-w-4xl">
-                        <Link
-                            href="/"
-                            className="mb-4 inline-flex items-center gap-2 text-sm font-medium text-zinc-300 hover:text-white"
-                        >
-                            <ArrowLeft className="h-4 w-4" />
-                            Back to portfolio
-                        </Link>
-                        <p className="text-sm font-medium uppercase tracking-wide text-zinc-400">
-                            {item.category} · {item.date ?? "Date unavailable"}
-                        </p>
-                        <h1 className="mt-2 text-3xl font-bold text-zinc-100 md:text-5xl">
-                            {item.title}
-                        </h1>
-                    </div>
+            <div className="mx-auto max-w-4xl px-6 pt-8 lg:px-12">
+                <Link
+                    href="/projects#design-work"
+                    className="inline-flex min-h-11 items-center gap-2 text-sm text-ink-muted transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                >
+                    <ArrowLeft className="h-4 w-4" strokeWidth={1.5} />
+                    Projects
+                </Link>
+                <p className="font-display mt-8 text-[12px] uppercase tracking-[0.22em] text-ink-muted">
+                    {item.category} · {item.date ?? "Date unavailable"}
+                </p>
+                <h1 className="font-display mt-3 max-w-3xl text-2xl uppercase leading-tight tracking-[0.1em] text-ink md:text-[2.25rem]">
+                    {item.title}
+                </h1>
+                <div data-scroll-reveal className="relative mt-8 aspect-[16/9] overflow-hidden border border-rule bg-paper-raised">
+                    <Image
+                        src={item.thumbnail}
+                        alt={item.title}
+                        fill
+                        priority
+                        sizes="(max-width: 1024px) 100vw, 896px"
+                        className="object-cover"
+                    />
                 </div>
             </div>
 
             <div className="mx-auto max-w-4xl px-6 py-12 lg:px-12">
-                <p className="text-xl font-light text-zinc-400">{item.summary}</p>
+                <p className="text-[1.15rem] leading-[1.6] text-ink">{item.summary}</p>
 
                 {item.body.length > 0 && (
-                    <div className="mt-8 space-y-4 text-zinc-300">
+                    <div className="mt-8 space-y-4 text-ink">
                         {item.body.map((paragraph, index) => (
                             <p key={index}>{paragraph}</p>
                         ))}
@@ -88,7 +86,7 @@ export default async function WorkDetailPage({
                     >
                         {item.eventDesignMockups && (
                             <div className="mb-6">
-                                <p className="mb-4 text-sm text-zinc-400">
+                                <p className="mb-4 text-sm text-ink-muted">
                                     {item.daytimeMockups ? "Blue-hour views · AI-assisted mockups" : "AI-assisted mockups based on the original event designs."}
                                 </p>
                                 <LightboxGallery images={item.eventDesignMockups} />
@@ -112,13 +110,13 @@ export default async function WorkDetailPage({
                             src={`${item.instagramReel}embed/`}
                             loading="lazy"
                             allow="fullscreen"
-                            className="h-[560px] w-full max-w-sm rounded-lg border border-zinc-800"
+                            className="h-[560px] w-full max-w-sm border border-rule"
                         />
                         <Link
                             href={item.instagramReel}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-3 inline-flex min-h-11 items-center gap-2 text-sm text-zinc-100 underline underline-offset-4"
+                            className="mt-3 inline-flex min-h-11 items-center gap-2 text-sm text-ink underline underline-offset-4"
                         >
                             Watch on Instagram <ExternalLink aria-hidden="true" className="h-4 w-4" />
                         </Link>
@@ -139,7 +137,7 @@ export default async function WorkDetailPage({
                                 href={link.url}
                                 target={link.url.startsWith("/") ? undefined : "_blank"}
                                 rel={link.url.startsWith("/") ? undefined : "noopener noreferrer"}
-                                className="inline-flex items-center gap-1 rounded-full bg-zinc-200 px-4 py-2 text-sm font-medium text-zinc-900 transition-colors hover:bg-zinc-300"
+                                className="inline-flex min-h-11 items-center gap-2 border border-ink px-4 text-sm text-ink transition-colors hover:bg-ink hover:text-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                             >
                                 {link.label}
                                 <ExternalLink className="h-3 w-3" />
@@ -148,10 +146,10 @@ export default async function WorkDetailPage({
                     </div>
                 )}
 
-                <hr className="mt-12 border-zinc-800" />
+                <hr className="mt-12 border-rule" />
 
-                <p className="mt-6 text-zinc-500">
-                    <Link href="/" className="font-medium text-zinc-200 hover:underline">
+                <p className="mt-6 text-ink-faint">
+                    <Link href="/projects#design-work" className="text-ink underline-offset-[5px] hover:underline">
                         ← Back to all work
                     </Link>
                 </p>

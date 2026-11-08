@@ -82,7 +82,7 @@ export default function PublicationsPage() {
                 summaryDescriptionClassName="text-sm"
                 className="py-8 md:py-10"
                 summaryClassName="py-0"
-                titleClassName="max-w-4xl text-2xl font-semibold leading-tight text-zinc-100 md:text-4xl"
+                titleClassName="max-w-4xl text-2xl font-medium leading-tight text-ink md:text-[2rem]"
                 contentClassName="pt-5 pb-0"
             >
                 <div className="flex flex-wrap gap-x-7 gap-y-2">
@@ -90,7 +90,7 @@ export default function PublicationsPage() {
                         href="https://ojs.library.lancs.ac.uk/lue/article/view/03-gadosey-etal"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300"
+                        className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-ink underline decoration-ink/40 underline-offset-4 hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                     >
                         Read the paper <ArrowUpRight className="h-4 w-4" />
                     </Link>
@@ -98,7 +98,7 @@ export default function PublicationsPage() {
                         href="https://doi.org/10.71957/sj3djh81"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300"
+                        className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-ink underline decoration-ink/40 underline-offset-4 hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                     >
                         DOI <ArrowUpRight className="h-4 w-4" />
                     </Link>
@@ -106,22 +106,22 @@ export default function PublicationsPage() {
                         href="https://orcid.org/0009-0009-0759-5944"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300"
+                        className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-ink underline decoration-ink/40 underline-offset-4 hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                     >
                         ORCID <ArrowUpRight className="h-4 w-4" />
                     </Link>
                 </div>
 
-                <CollapsibleSection title="Contributors" className="mt-8 border-t border-zinc-800">
-                    <ul className="mt-3 divide-y divide-zinc-800">
+                <CollapsibleSection title="Contributors" className="mt-8 border-t border-rule">
+                    <ul className="mt-3 divide-y divide-rule">
                         {contributors.map((contributor) => (
                             <li
                                 key={contributor.name}
                                 className="flex flex-col justify-between gap-2 py-4 sm:flex-row sm:items-center"
                             >
                                 <div>
-                                    <p className="font-medium text-zinc-100">{contributor.name}</p>
-                                    <p className="mt-1 text-sm leading-6 text-zinc-400">
+                                    <p className="font-medium text-ink">{contributor.name}</p>
+                                    <p className="mt-1 text-sm leading-6 text-ink-muted">
                                         {contributor.department} · Lancaster University Ghana · Author
                                     </p>
                                 </div>
@@ -130,7 +130,7 @@ export default function PublicationsPage() {
                                         href={contributor.orcid}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex min-h-11 w-fit items-center gap-2 text-sm text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300"
+                                        className="inline-flex min-h-11 w-fit items-center gap-2 text-sm text-ink underline decoration-ink/40 underline-offset-4 hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                                     >
                                         ORCID <ArrowUpRight className="h-4 w-4" />
                                     </Link>
@@ -140,14 +140,14 @@ export default function PublicationsPage() {
                     </ul>
                 </CollapsibleSection>
 
-                <CollapsibleSection title="Abstract" className="mt-10 border-t border-zinc-800">
-                    <div className="mt-4 max-w-4xl space-y-4 text-base leading-7 text-zinc-300">
+                <CollapsibleSection title="Abstract" className="mt-10 border-t border-rule">
+                    <div className="mt-4 max-w-4xl space-y-4 text-base leading-7 text-ink">
                         {abstract.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                     </div>
                 </CollapsibleSection>
 
-                <CollapsibleSection title="References" className="mt-10 border-t border-zinc-800">
-                    <ol className="mt-4 max-w-4xl list-decimal space-y-4 pl-5 text-sm leading-6 text-zinc-300 marker:text-zinc-500">
+                <CollapsibleSection title="References" className="mt-10 border-t border-rule">
+                    <ol className="mt-4 max-w-4xl list-decimal space-y-4 pl-5 text-sm leading-6 text-ink marker:text-ink-faint">
                         {references.map((reference) => (
                             <li key={reference.citation}>
                                 {reference.citation}{' '}
@@ -156,7 +156,7 @@ export default function PublicationsPage() {
                                         href={reference.doi}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex min-h-11 items-center gap-1 text-zinc-100 underline decoration-zinc-600 underline-offset-4 hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-300"
+                                        className="inline-flex min-h-11 items-center gap-1 text-ink underline decoration-ink/40 underline-offset-4 hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                                     >
                                         DOI <ArrowUpRight className="h-3.5 w-3.5" />
                                     </Link>
