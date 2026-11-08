@@ -4,6 +4,7 @@ import { HeroParallax } from "@/components/ui/hero-parallax";
 import { LogoSlider } from "@/components/logo-slider";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
+import { ScrollHint } from "@/components/scroll-hint";
 import { landingHighlights } from "@/lib/landing-highlights";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <LogoSlider />
       <ContactSection />
       <Footer />
+      <ScrollHint />
     </main>
   );
 }
